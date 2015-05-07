@@ -6,16 +6,37 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{esint}
+\usepackage[all]{xy}
 
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 \numberwithin{section}{chapter}
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}
+  \theoremstyle{definition}
+  \newtheorem{defn}[thm]{\protect\definitionname}
+  \theoremstyle{remark}
+  \newtheorem*{rem*}{\protect\remarkname}
+  \theoremstyle{definition}
+  \newtheorem*{example*}{\protect\examplename}
+ \theoremstyle{definition}
+ \newtheorem*{defn*}{\protect\definitionname}
+  \theoremstyle{plain}
+  \newtheorem*{cor*}{\protect\corollaryname}
 
 \makeatother
 
 \usepackage{babel}
+  \providecommand{\corollaryname}{Corollary}
+  \providecommand{\definitionname}{Definition}
+  \providecommand{\examplename}{Example}
+  \providecommand{\remarkname}{Remark}
+\providecommand{\theoremname}{Theorem}
+
 \begin{document}
 
 \title{Hitchin Systems Seminar}
@@ -303,7 +324,7 @@ any connection $A$ on the trivial bundle over $\overline{B}^{4}$
 with $||F_{A}||_{L^{2}}<\epsilon_{1}$ is gauge equivalent to a connection
 $\tilde{A}$ over $B^{4}$ with 
 \begin{enumerate}
-\item $\D^{*}\tilde{A}=0$,
+\item $d^{*}\tilde{A}=0$,
 \item $\lim_{\left|x\right|\rightarrow1}\tilde{A}_{r}=0$, and 
 \item $||\tilde{A}||_{L_{1}^{2}}\leq M||F_{\tilde{A}}||_{L^{2}}$. 
 \end{enumerate}
