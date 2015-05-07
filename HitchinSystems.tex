@@ -39,7 +39,235 @@
 \chapter{Teichmueller Theory}
 
 
+%% Matthew's talk #1 
 \chapter{Construction of the Hitchin Moduli Space}
+
+
+This talk closely follows \cite{H1}. In this chapter, it is shown
+that the Hitchin moduli space $\mathcal{M}_{H}$ is a smooth manifold
+of dimension $12(g-1)$. We also prove that $\mathcal{M}_{H}$ is
+equipped with a complete hyperkahler metric. 
+
+
+\section{Definitions}
+
+Let $M$ be a Riemannian surface, $P\rightarrow M$ a principal $G=SO\left(3\right)$-bundle,
+$V$ the associated rank 2 vector bundle, and $\mathcal{G}$ the group
+of gauge transformations ($\mathcal{G}=Map\left(M,G\right)$). Recall
+that for a connection $A$ on $P$ and $\Phi\in\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)$,
+the self-dual equations are 
+\begin{align*}
+\tag{\ensuremath{\star}}F_{A}+\left[\Phi,\Phi^{*}\right] & =0,\\
+\overline{\partial_{A}}\Phi & =0
+\end{align*}
+
+
+For a connection $A$, $u\in\mathcal{G}$ acts by 
+\[
+u\left(A\right)=uAu^{-1}-\left(du\right)u^{-1}
+\]
+(where the covariant derivative is $\nabla_{A}=d+A\wedge$, i.e.,
+\[
+\nabla_{u\left(A\right)}s=u\nabla_{A}\left(u^{-1}s\right)
+\]
+for a section $s$ of $V$.
+
+For $\Phi\in\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)$, $u$
+acts by 
+\[
+u\left(\Phi\right)=u\Phi u^{-1},
+\]
+where we regard $adP\otimes\mathbb{C}$ as the bundle of trace-zero
+endomorphisms of $V$.
+\begin{defn}
+The Hitchin moduli space is 
+\[
+\mathcal{M}_{H}:=\left\{ \mbox{solutions to (}\star\mbox{)}\right\} /\mathcal{G}.
+\]
+\end{defn}
+\begin{description}
+\item [{Goal}] To learn about the geometry and topology of $\mathcal{M}_{H}$.
+\end{description}
+
+\section{Summary of results}
+
+Let $V$ be a rank 2, odd degree vector bundle over a Riemannian surface
+$M$. Then, 
+\begin{itemize}
+\item $\mathcal{M}_{H}$ is a smooth manifold of dimension $12\left(g-1\right)$.
+\item $\mathcal{M}_{H}$ has a natural metric.
+\item $\mathcal{M}_{H}$'s metric is complete and hyperkahler (in fact,
+$\mathcal{M}_{H}$ is a hyperkahler quotient).\end{itemize}
+\begin{rem*}
+$V$ has odd degree $\implies$ there are no reducible solutions to
+$\left(\star\right)$ $\implies$ $\mathcal{G}$ acts freely on $\left(\star\right)$.
+\end{rem*}
+
+\section{$\mathcal{M}_{H}$ is a dimension $12\left(g-1\right)$ smooth manifold}
+
+First, to get the expected dimension, we compute the dimension of
+the tangent space to $\mathcal{M}_{H}$ at a regular point (i.e.,
+one with trivial isotropy group). 
+
+
+\subsection{Idea of Proof}
+\begin{itemize}
+\item Linearize $(\star)$ to determine the expected dimension.
+\item Let $\left(A\times\Omega\right)_{0}$ denote ``regular points,''
+i.e., ones which are only fixed by the identity in $\mathcal{G}$
+(those with trivial isotropy group). Then, exhibit $\mathcal{M}_{H}$
+is a smooth submanifold of $\left(\mathcal{A}\times\Omega\right)_{0}/\mathcal{G}$
+using the regular value theorem.
+\end{itemize}
+
+\subsection{Linearization of $(\star)$}
+
+Let $\left(\dot{A},\dot{\Phi}\right)\in\Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)$.
+To get the linearization of $(\star$), fix a base point $\left(A,\Phi\right)$
+and look at 
+\[
+\left.\frac{d}{dt}\right|_{t=0}\left(\star\right)\left(A+t\dot{A},\Phi+t\dot{\Phi}\right).
+\]
+Recalling that $F_{A}=dA+A\wedge A$, the first equation becomes 
+\[
+d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right]=0,
+\]
+and the second is 
+\[
+\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi=0.
+\]
+
+
+$\left(\dot{A},\dot{\Phi}\right)$ arises from an infinitesimal gauge
+transformation $\dot{\psi}\in\Omega_{M}^{0}\left(adP\right)$ if 
+\begin{align*}
+\dot{A} & =d_{A}\dot{\psi}, & \dot{\Phi} & =\left[\Phi,\dot{\psi}\right].
+\end{align*}
+Let 
+\begin{eqnarray*}
+d_{1}:\Omega_{M}^{0}\left(adP\right) & \longrightarrow & \Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)\\
+\dot{\psi} & \mapsto & \left(d_{A}\dot{\psi},\left[\Phi,\dot{\psi}\right]\right)
+\end{eqnarray*}
+and 
+\begin{eqnarray*}
+d_{2}:\Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right) & \longrightarrow & \Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
+\left(\dot{A},\dot{\Phi}\right) & \mapsto & \left(d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right],\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi\right).
+\end{eqnarray*}
+Then, $d_{1},d_{2}$ define an \emph{elliptic complex} with index
+$3\left(2-2g\right)-6\left(g-1\right)=12\left(1-g\right)$. The Atiyah-Singer
+index theorem then says that 
+\[
+\dim H^{0}-\dim H^{1}+\dim H^{2}=12\left(1-g\right).
+\]
+
+
+
+\subsection{Elliptic Complexes}
+
+Now, a short digression into elliptic complexes. Let $X$ be a manifold,
+$\pi:T^{*}X\rightarrow X$ be projection onto the base, and $\left\{ E_{k}\rightarrow X\right\} $
+a collection of vector bundles over $X$. 
+\begin{defn}
+A chain complex 
+\[
+\xymatrix{\cdots\ar[r] & \Gamma\left(E_{k-1}\right)\ar[r]^{P_{k-1}} & \Gamma\left(E_{k}\right)\ar[r]^{P_{k}} & \Gamma\left(E_{k+1}\right)\ar[r] & \cdots}
+\]
+is \textbf{elliptic} if the corresponding sequence of symbols 
+\[
+\xymatrix{\cdots\ar[r] & \pi^{*}E_{k-1}\ar[r]^{\sigma\left(P_{k-1}\right)} & \pi^{*}E_{k}\ar[r]^{\sigma\left(P_{k}\right)} & \pi^{*}E_{k+1}\ar[r] & \cdots}
+\]
+is exact.\end{defn}
+\begin{example*}
+Let $P:E_{1}\rightarrow E_{2}$ be a differential operator. Then,
+the complex 
+\[
+\xymatrix{0\ar[r] & \Gamma\left(E_{1}\right)\ar[r]^{P} & \Gamma\left(E_{2}\right)\ar[r] & 0}
+\]
+is elliptic means that 
+\[
+\xymatrix{0\ar[r] & \pi^{*}E_{1}\ar[r]^{\sigma\left(P\right)} & \pi^{*}E_{2}\ar[r] & 0}
+\]
+is exact, i.e., that $\sigma\left(P\right):\pi^{*}E_{1}\rightarrow\pi^{*}E_{2}$
+is an isomorphism. Recall that this is the ``usual'' definition
+of elliptic differential operator. 
+\end{example*}
+Now, return to our elliptic complex. 
+
+\[
+\xymatrix{\Omega_{M}^{0}\left(adP\right)\ar[r]^-{d_{1}} & \Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)\ar[r]^-{d_{2}} & \Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
+\dot{\psi}\ar@{|->}[r] & \left(d_{A}\dot{\psi},\left[\Phi,\dot{\psi}\right]\right)\\
+ & \left(\dot{A},\dot{\Phi}\right)\ar@{|->}[r] & \left(d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right],\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi\right)
+}
+\] 
+
+By construction, we're interested in $H^{1}$ of this complex: $H^{0}=\ker d_{1}$
+is the covariantly constant $\dot{\psi}$ which commute with $\Phi$.
+These correspond to reducible solutions to $(\star$). So, if $H^{0}\neq0$,
+then $\left(A,\Phi\right)$ is reducible. In fact, by considering
+$d_{2}^{*}$, we can show that $H^{2}=0$ as well \cite{H1}. Hence,
+\[
+-\dim H^{1}=12\left(1-g\right),
+\]
+i.e., for a regular point $\left(A,\Phi\right)$, 
+\[
+\boxed{\dim T_{\left(A,\Phi\right)}\mathcal{M}_{H}=12\left(g-1\right)}.
+\]
+
+
+
+\subsection{$\mathcal{M}_{H}$ is a smooth manifold}
+
+This is a sketch, for complete details see \cite{H1}. 
+\begin{defn}
+$\left(A,\Phi\right)$ is a \textbf{regular point} if the isotropy
+group of $\left(A,\Phi\right)$ is the identity (i.e., there are no
+nontrivial gauge transformations fixing this point).
+\end{defn}
+Recall that infinitesimally, these are the points where there are
+no nonzero solutions to $d_{1}\dot{\psi}=0$. 
+
+Let $\left(\mathcal{A}\times\Omega\right)_{0}$ denote the open set
+of regular points in $\mathcal{A}\times\Omega$, and 
+\[
+B:=\left(\mathcal{A}\times\Omega\right)_{0}/\mathcal{G}.
+\]
+By construction, $B$ is a Banach manifold with the quotient topology.
+We have the map 
+\[
+d_{1}^{*}:\Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)\longrightarrow\Omega_{M}^{0}\left(adP\right).
+\]
+Define a \emph{slice} of $\mathcal{M}_{H}$ to be $\ker d_{1}^{*}$,
+at some fixed $\left(A_{0},\Phi_{0}\right)$---then, the slices provide
+coordinate patchs for $B$. Set 
+\begin{eqnarray*}
+f:\ker d_{1}^{*} & \longrightarrow & \Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
+\left(A,\Phi\right) & \mapsto & \left(F_{A}+\left[\Phi,\Phi^{*}\right],\overline{\partial_{A}}\Phi\right);
+\end{eqnarray*}
+then, $f^{-1}\left(0,0\right)$ is a smooth submanifold of $\ker d_{1}^{*}$
+with dimension $12(g-1)$. 
+
+Since $\ker d_{1}^{*}$ form coordinate patches for $B$, the remainder
+of the proof is just arguing that the $\ker d_{1}^{*}$ patch together
+to form a smooth manifold. 
+
+
+\section{The tangent space}
+
+Thanks to our results in the previous section, we have an explicit
+description of the tangent space to $\mathcal{M}_{H}$: 
+\[
+T_{\left(A,\Phi\right)}\mathcal{M}_{H}=\left\{ \left(\dot{A},\dot{\Phi}\right)\left|\begin{matrix}d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right]=0,\\
+\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi=0,\\
+d_{A}^{*}\dot{A}+Re\left[\Phi^{*},\dot{\Phi}\right]=0.
+\end{matrix}\right.\right\} 
+\]
+The third equation appears because $d_{1}^{*}\left(\dot{A},\dot{\Phi}\right)=d_{A}^{*}\dot{A}+Re\left[\Phi^{*},\dot{\Phi}\right]$. 
+
+
+\section{$\mathcal{M}_{H}$ has a complete hyperkahler metric}
+
+
+\section{Summary of topological results}
 
 
 \chapter{Integrable Systems and Spectral Curves}
