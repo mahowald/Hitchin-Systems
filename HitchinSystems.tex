@@ -266,8 +266,102 @@ The third equation appears because $d_{1}^{*}\left(\dot{A},\dot{\Phi}\right)=d_{
 
 \section{$\mathcal{M}_{H}$ has a complete hyperkahler metric}
 
+Recall from Sean's talk that the metric on $\mathcal{A}\times\Omega$
+given by 
+\[
+g\left((\psi,\phi),\left(\psi,\phi\right)\right)=2i\int_{M}Tr\left(\psi^{*}\psi+\phi\phi^{*}\right)
+\]
+induces a metric on $T_{p}\mathcal{M}_{H}$. We want to show that
+this is a complete metric on $T_{\left(A,\Phi\right)}\mathcal{M}_{H}$.
+As a reminder:
+\begin{defn*}
+A metric on $M$ is \textbf{complete} if every Cauchy sequence of
+points on $M$ has a limit which is also in $M$.
+\end{defn*}
+
+\subsection{Idea of Proof}
+
+By contradiction: Suppose we have a sequence of points in $\mathcal{M}_{H}$
+defined by a geodesic $\gamma$ converging to a point not in $\mathcal{M}_{H}$.
+Because $g$ is $\mathcal{G}$-invariant, we can look at $\tilde{\mathcal{M}_{H}}\subset\mathcal{A}\times\Omega$.
+Lift $\gamma$ to a horizontal $\tilde{\gamma}$ in $\tilde{\mathcal{M}}_{H}$.
+$\tilde{\gamma}$ still defines a Cauchy sequence in $\tilde{\mathcal{M}}_{H}$,
+so we have 
+\[
+||A_{n}-\overline{A}||_{L^{2}}^{2}+||\Phi_{n}-\overline{\Phi}||_{L^{2}}^{2}\leq C
+\]
+ for some $C$ as $\left(A_{n},\Phi_{n}\right)\rightarrow\left(\overline{A},\overline{\Phi}\right)$
+(where $\left(\overline{A},\overline{\Phi}\right)$ is the limiting
+point not in $\mathcal{M}_{H}$). 
+
+Now, we apply Uhlenbeck's compactification theorem to show that there's
+a gauge transformation taking $\left(\overline{A},\overline{\Phi}\right)$
+to a solution of $(\star)$:
+\begin{thm}
+[Uhlenbeck] There are constants $\epsilon_{1}$, $M>0$ such that
+any connection $A$ on the trivial bundle over $\overline{B}^{4}$
+with $||F_{A}||_{L^{2}}<\epsilon_{1}$ is gauge equivalent to a connection
+$\tilde{A}$ over $B^{4}$ with 
+\begin{enumerate}
+\item $\D^{*}\tilde{A}=0$,
+\item $\lim_{\left|x\right|\rightarrow1}\tilde{A}_{r}=0$, and 
+\item $||\tilde{A}||_{L_{1}^{2}}\leq M||F_{\tilde{A}}||_{L^{2}}$. 
+\end{enumerate}
+Moreover for suitable constants $\epsilon_{1}$, $M$, $\tilde{A}$
+is uniquely determined by these properties, up to $\tilde{A}\mapsto u_{0}\tilde{A}u_{0}^{-1}$
+for a constant $u_{0}$ in $U\left(n\right)$.
+\end{thm}
+In particular, we can use the following corrollary:
+\begin{cor*}
+For any sequence of ASD connections $A_{\alpha}$ over $\overline{B}^{4}$
+with $||F\left(A_{\alpha}\right)||_{L^{2}}\leq\epsilon$, there is
+a subsequence $\alpha'$ and gauge equivalent connections $\tilde{A}_{\alpha'}$
+which converge in $C^{\infty}$ on the open ball. 
+\end{cor*}
+Therefore, there's a gauge transformation taking $\left(\overline{A},\overline{\Phi}\right)$
+to a solution of $(\star)$. This is a contradiction, so $\mathcal{M}_{H}$
+is complete. 
+
+
+\subsection{Hyperkahler structure}
+
+Recall from Sean's talk that there's a symplectic form on $\mathcal{M}_{H}$
+given by 
+\[
+\omega\left((\psi_{1},\phi_{1}),\left(\psi_{2},\phi_{2}\right)\right)=\int_{M}Tr\left(\phi_{2}\psi_{1}-\phi_{1}\psi_{2}\right).
+\]
+This defines a complex moment map from the action of $\mathcal{G}$:
+\[
+\mu\left(A,\Phi\right)=\overline{\partial}_{A}\Phi.
+\]
+We can write $\mu=\mu_{2}+i\mu_{3}$ and $\omega=\omega_{2}+i\omega_{3}$
+to get two symplectic structures out of this. The third (or first?)
+symplectic structure is just the Kahler form associated to the metric
+\[
+g=2i\int_{M}Tr\left(\psi^{*}\psi+\phi\phi^{*}\right),
+\]
+and has moment map 
+\[
+\mu_{1}\left(A,\Phi\right)=F_{A}+\left[\Phi,\Phi^{*}\right].
+\]
+This exhibits $\mathcal{M}_{H}$ as a hyperkahler quotient of $\mathcal{A}\times\Omega$:
+\[
+\mathcal{M}_{H}=\bigcap_{i=1}^{3}\mu_{i}^{-1}\left(0\right)/\mathcal{G}.
+\]
+
+
 
 \section{Summary of topological results}
+
+Here, we state some topological results. For proofs, see section 7
+of \cite{H1}.
+
+$\mathcal{M}_{H}$ is...
+\begin{itemize}
+\item non-compact
+\item connected and simply connected
+\item the Betti numbers $b_{i}$ vanish for $i>6g-6.$
+\end{itemize}
 
 
 \chapter{Integrable Systems and Spectral Curves}
