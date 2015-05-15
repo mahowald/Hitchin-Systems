@@ -407,7 +407,368 @@ $\mathcal{M}_{H}$ is...
 
 
 \chapter{Geometric Langlands and Mirror Symmetry}
-\begin{thebibliography}{BNR}
+
+% Matthew Talk 2
+\chapter{Hitchin Systems and Supersymmetric Field Theories}
+
+\section{Introduction and definitions}
+
+In previous talks, we've explored many properties of the Hitchin system
+and its geometry, as well as several applications. The core idea of
+this talk is that, given a certain supersymmetric field theory, we
+can obtain the Hitchin system as a moduli space associated to this
+theory via a standard procedure in quantum field theories. Gaiotto,
+Moore, and Neitzke \cite{GMN} use this approach to construct a canonical
+coordinate system on the Hitchin moduli space. The goal of this talk
+is to explain some of the language of supersymmetric quantum field
+theories, and describe how we can obtain $\mathcal{M}_{H}$ from a
+particular class of such theories. 
+
+
+\subsection{Supersymmetry}
+
+Consider $\mathbb{R}^{n}$. The \textbf{Poincare group} is the group
+of translations and rotations of this space: $G=ISO(n)\cong\mathbb{R}^{n}\rtimes SO(n)$.
+(In Minkowski signature, say for $\mathbb{R}^{n,1}$, we might write
+$ISO(n,1)$ instead). Recall that there's a spin group defined as
+a double cover of $SO(n)$: 
+\[
+\xymatrix{1\ar[r] & \mathbb{Z}_{2}\ar[r] & Spin(n)\ar[r] & SO(n)\ar[r] & 1.}
+\]
+When we have such a double cover, we get an extension of the group
+$G$ to the supergroup $\tilde{G}$. This gives an extension of the
+Poincare algebra $\mathfrak{g}$ to the \textbf{super Poincare algebra}
+$\tilde{\mathfrak{g}}$ coming from the double-cover of $SO(n)$.
+$\tilde{\mathfrak{g}}$ is called the \textbf{supersymmetry algebra}.
+Such $\tilde{g}$ are labelled by a choice of a representation of
+$Spin(n)$. For irreducible representations of $Spin(n)$, there are
+two possible cases:
+\begin{itemize}
+\item There is either a unique irreducible spinor representation $S$, and
+any spinor representation has the form $S^{\oplus N}$ for some $N$,
+or
+\item There are two distinct irreducible real spinor representations $S_{+},S_{-}$,
+and any spinor representation has the form $S_{+}^{\oplus N_{1}}\oplus S_{-}^{\oplus N_{2}}$
+for some $N_{1},N_{2}$. (This occurs in dimensions $n\equiv2,6\mod8$). 
+\end{itemize}
+Thus, when someone says $N=n$ or $N=\left(n_{1},n_{2}\right)$ supersymmetry,
+they are specifying which extension of the Poincare algebra they're
+referring to.
+
+The supersymmetry Lie algebra $\tilde{\mathfrak{g}}$ splits into
+an even and odd part: 
+\[
+\tilde{\mathfrak{g}}=\mathfrak{g}^{0}\oplus\mathfrak{g}^{1},
+\]
+and is equipped with a skew-symmetric bracket $\left[\cdot,\cdot\right]:\tilde{\mathfrak{g}}\rightarrow\tilde{\mathfrak{g}}$
+which satisfies the Jacobi identity. Note that $\left[\mathfrak{g}^{1},\mathfrak{g}^{1}\right]\subset\mathfrak{g}^{0}$,
+$\mathfrak{g}^{0}=\mathfrak{g}$ (the Poincare algebra), and $\mathfrak{g}^{1}$
+is just a linear representation of $\mathfrak{g}^{0}$. 
+\begin{example*}
+For $N=2$ SUSY and $G=ISO(3,1)$, we'll be interested in a $\tilde{G}$
+whose Lie algebra has even part 
+\[
+\mathfrak{g}^{0}=\mbox{\ensuremath{\mathfrak{iso}}}(3,1)\oplus\mathbb{C}.
+\]
+The abelian $\mathbb{C}$ factor is central in $\tilde{\mathfrak{g}}$,
+and has a canonical generator $Z$. 
+\end{example*}
+
+\subsection{BPS States}
+
+Let $\mathcal{H}$ denote the Hilbert space of states of our quantum
+system on $\mathbb{R}^{3,1}$. We want to think of a state as being
+labeled by a representation of $\tilde{G}$---the representation encodes
+the data of the particle. For example, the vacuum state (``empty
+space'') in $\mathcal{H}$ corresponds to the trivial representation
+of $\tilde{G}$. The next simplest kind of state is one where space
+is empty except for a single particle propogating with some definite
+momentum $p\in T^{*}\mathbb{R}^{3,1}$. Call the subspace of the Hilbert
+space consisting of single-particle states $\mathcal{H}^{1}$. Here,
+there's some structure:
+\begin{itemize}
+\item $\mathcal{H}^{1}$ splits into components $\mathcal{H}_{M}^{1}$,
+labeled by $M\in\mathbb{R}_{\geq0}$. $M^{2}$ is the eigenvalue of
+a quadratic Casimir operator in $ISO(3,1)$. Physically, it's the
+mass of the particle. 
+\item For $N=2$ SUSY as in our prior example, we also have a central generator
+$Z\in\mathbb{C}$. Together, these give a decomposition 
+\[
+\mathcal{H}^{1}=\bigoplus_{M,Z}\mathcal{H}_{M,Z}^{1}.
+\]
+
+\end{itemize}
+Fix some momentum $p_{rest}\in\left(\mathbb{R}^{3,1}\right)^{*}$
+with $||p_{rest}||^{2}=M^{2}$, and consider the subspace $\mathcal{H}_{M,Z}^{1,rest}$
+on which the subgroup of translations along $\mathbb{R}^{3,1}$ acts
+by $p_{rest}$. This is a representation of a subgroup $\tilde{G}_{rest}\subset\tilde{G}$
+with 
+\[
+\tilde{G}_{rest}=SO\left(3\right)\ltimes\tilde{T},
+\]
+where the ``super translation group'' $\tilde{T}$ is generated
+by the ordinary translations $T=\mathbb{R}^{3,1}$ plus the central
+character $Z$ and the ``odd translations'' $\mathfrak{g}^{1}$.
+The odd translations act by a Clifford algebra (on an 8-dimensional
+vector space). We can then count the number of unitary irreducible
+representations of this Clifford algebra:
+\begin{itemize}
+\item If $M<\left|Z\right|$, then there are \emph{no} unitary representations
+of the Clifford algebra.
+\item If $M=\left|Z\right|$, the Clifford algebra is degenerate, and its
+unique unitary irrep $S$ has dimension $2^{4/2}=4$. 
+\item If $M>\left|Z\right|$, the Clifford algebra is nondegenerate, and
+its unique unitary irrep $S$ has dimension $2^{8/2}=16$. 
+\end{itemize}
+States that satisfy $M=\left|Z\right|$ are called \textbf{BPS} (Bogomol'nyi,
+Prasad, Sommerfield) \textbf{states}, and as one might expect, they
+satisfy a set of differential equations depending on the field theory.
+The BPS states are those in which half of the supersymmetry generators
+are unbroken. 
+
+
+\subsection{Moduli of Vacua}
+
+The ``moduli space'' associated to a QFT typically refers to the
+moduli space of vacua. By \textbf{vacua}, we mean the quantum state
+with the lowest possible energy.
+\begin{description}
+\item [{Question}] In what sense is the space of vacua a moduli space?
+\end{description}
+For scalar fields, these are labelled by the \textbf{vacuum expectation
+value} (VEV). The VEV of an operator is (as the name suggests) the
+expectation value of the operator in the vacuum (the quantum state
+with the lowest possible energy). We can label a vacuum state by its
+VEV, and this gives a moduli space of vacua. 
+
+For $N=2$ SUSY, the superalgebra has two representations with scalars:
+\textbf{vectormultiplets} (one complex scalar), and \textbf{hypermultiplets}
+(two complex scalars). This gives a local splitting of the moduli
+of vacua $\mathcal{M}$ as 
+\[
+\mathcal{M}=\mathcal{M}_{C}\oplus\mathcal{M}_{H},
+\]
+where $\mathcal{M}_{C}$ is the ``Coulomb branch'' (vectormultiplets),
+and $\mathcal{M}_{H}$ is the ``Higgs branch'' (hypermultiplets). 
+
+
+\section{Compactification and Dimensional Reduction}
+
+Compactification of a field theory is a process where, instead of
+considering a general space $X$, we consider $X=M\times C$ where
+$C$ is some compact space. Dimensional reduction is the limit of
+the compactified theory where the volume of the compact space is shrunk
+to zero, which produces an effective theory on the remaining dimensions. 
+\begin{example*}
+[Toy Example] Consider a field theory on $X=\mathbb{R}^{n}\times S_{R}^{1}$
+($S_{R}^{1}$ is the circle of radius $R$). Let $\theta$ be a coordinate
+on $S_{R}^{1}$, and $x^{i}$ coordinates on $\mathbb{R}^{n}$. At
+a fixed $x$ coordinate, the fields along the $S_{R}^{1}$ look like
+\[
+\phi|_{x}=\sum_{n}A_{n}\cos\left(\frac{2\pi n}{R}\theta\right)+B_{n}\sin\left(\frac{2\pi n}{R}\theta\right),
+\]
+where the coefficients $A_{n}$ and $B_{n}$ are determined by the
+boundary conditions on $\phi$. As $R\rightarrow0$, the eigenvalues
+$\lambda_{n}=\frac{2\pi n}{R}$ approach $\infty$, except for $n=0$.
+Note that in quantum mechanics, $\hbar\lambda_{n}$ is the \emph{momentum}
+of eigenstate $n$, so as $R\rightarrow\infty$, all mometums except
+the trivial one also $\rightarrow\infty$. We should interpert $R\rightarrow0$
+as meaning that, for finite energy (and hence, finite momentum), the
+only eigenstate left is the trivial one. 
+
+If $\phi|_{x}$ is constant, it means that the field $\phi$ does
+not depend on $\theta$---the dimensional reduction of the theory
+on $S_{R}^{1}$ consists of the fields of the $\mathbb{R}^{n}\times S_{R}^{1}$
+theory which do not depend on $\theta$.
+\end{example*}
+So, we have two equivalent perspectives on dimensional reduction to
+$M$ of a theory on a space $M\times C$:
+\begin{itemize}
+\item It's the limit of the theory on $M\times C$ where the volume of $C$
+contracts to zero, or
+\item It's the theory on $M\times C$ where all fields are taken to be independent
+of coordinates on $C$.
+\end{itemize}
+
+\begin{example*}
+[Yang-Mills] We actually already encountered dimensional reduction
+in one of the first lectures of the course. Consider classical Yang-Mills
+theory.
+
+Yang-Mills theory is a field theory defined for principal $G$-bundles
+$P\rightarrow X$, where $X$ is a 4-dimensional Riemannian manifold. 
+\begin{description}
+\item [{Fields}] Connections $A$ on $P$.
+\item [{Lagrangian}] 
+\[
+L\left(A\right)=\left|F_{A}\right|^{2}d\mu
+\]
+
+\end{description}
+Recall that from the Lagrangian, we obtain the action functional by
+\[
+S\left(A\right)=\int_{X}L\left(A\right)=\int_{X}\left|F_{A}\right|^{2}d\mu.
+\]
+The equations of motion for Yang-Mills theory are 
+\[
+d_{A}^{*}F_{A}=0,
+\]
+and the instantons are the (anti) self-dual connections: 
+\[
+F_{A}=\pm*F_{A}.
+\]
+(Here, $*:\Omega_{X}^{2}\cong\Omega_{X}^{2}$ is the Hodge star operator).
+
+In local coordinates we can write $d_{A}=d+A$, where 
+\[
+A=A_{1}dx_{1}+A_{2}dx_{2}+A_{3}dx_{3}+A_{4}dx_{4}.
+\]
+Define 
+\[
+F_{ij}:=\left[\nabla_{i},\nabla_{j}\right]=\frac{\partial}{\partial x_{i}}A_{j}-\frac{\partial}{\partial x_{j}}A_{i}+\left[A_{i},A_{j}\right].
+\]
+Look at the self-dual connections. Then, the instanton equation $F_{A}^{-}=0$
+becomes 
+\begin{eqnarray*}
+F_{12} & = & F_{34},\\
+F_{13} & = & -F_{24},\\
+F_{14} & = & F_{23}.
+\end{eqnarray*}
+
+
+Let's restrict attention to $X=C\times\mathbb{R}^{2}$, where $C$
+is a Riemann surface. Suppose that we compactify and perform dimensional
+reduction in $\mathbb{R}^{2}$ coordinates: restrict to $A_{j}$ which
+are invariant under translation in $x_{3}$, $x_{4}$. Then, $A_{1}dx_{1}+A_{2}dx_{2}$
+defines a connection on $C$. Relabel $A_{3}=\phi_{1}$ and $A_{4}=\phi_{2}$,
+and define $\varphi=\phi_{1}-i\phi_{2}$; then the self-dual equations
+become 
+\begin{eqnarray*}
+F_{A}-\frac{1}{2}i\left[\varphi,\varphi^{*}\right] & = & 0,\\
+\left[\nabla_{1}+i\nabla_{2},\varphi\right] & = & 0.
+\end{eqnarray*}
+If we think of $\varphi$ as defining a local section of $\Omega^{0}\left(C;ad(P)\otimes\mathbb{C}\right)$,
+and set $\Phi=\frac{1}{2}\varphi dz\in\Omega^{1,0}\left(ad\left(P\right)\otimes\mathbb{C}\right)$
+and $\Phi^{*}=\frac{1}{2}\varphi^{*}d\overline{z}\in\Omega^{0,1}\left(ad(P)\otimes\mathbb{C}\right)$,
+then the equations become 
+\begin{eqnarray*}
+F_{A}+\left[\Phi,\Phi^{*}\right] & = & 0,\\
+\overline{\partial_{A}}\Phi & = & 0,
+\end{eqnarray*}
+the usual Hitchin equations.
+\end{example*}
+
+\section{5D Super Yang-Mills Theory}
+
+Now, let's repeat the previous example, but including some supersymmetry.
+5D Super Yang-Mills theory admits a conventional Lagrangian description:
+Let $P$ be a principal $G$-bundle over $X$ (a 5-dimensional space).
+The theory has: 
+\begin{description}
+\item [{Fields}] Connections $A$ on $P$, sections $\phi^{i}$ of $Ad\left(P\right)$
+($i=1,\ldots,5$), and fermions.
+\item [{Lagrangian}] 
+\[
+L=\frac{R}{8\pi^{2}}Tr\left[\frac{1}{R^{2}}F_{A}\wedge*F_{A}+\sum_{i=1}^{5}d_{A}\phi^{i}\wedge*d_{A}\phi^{i}+\mbox{fermions}\right].
+\]
+\end{description}
+\begin{rem*}
+~
+\begin{enumerate}
+\item 5D SYM is well-defined as an effective field theory, below a certain
+energy scale. It is not obviously well-defined at arbitrarily high
+energies. 
+\item There's this unusual $R$ factor appearing here that you should be
+suspicious of. We'll explain where this comes from at the end of the
+talk.
+\end{enumerate}
+\end{rem*}
+
+\subsection*{Compactification on $C$}
+
+Let's take $X=\mathbb{R}^{2,1}\times C$, where $C$ is a Riemann
+surface. Analogous to the classical case, when we compactify 5D SYM
+on $C$, we combine $\phi^{4}$ and $\phi^{5}$ into a complex-valued
+1-form on $C$: 
+\[
+\varphi=\left(\phi^{4}+i\phi^{5}\right)dz.
+\]
+Again, to do dimensional reduction, we require translation invariance---this
+time along $\mathbb{R}^{2,1}$. 
+\begin{description}
+\item [{Question}] What are the classical field configurations in the compactified
+theory which preserve the supersymmetry? (Recall that these are the
+BPS states!)
+\end{description}
+Assuming $\phi^{1},\phi^{2},\phi^{3}=0$, the equations satisfied
+by the remaining fields are 
+\[
+\tag{\ensuremath{\star}}\begin{cases}
+ & F_{A}+R^{2}\left[\varphi,\varphi^{*}\right]=0,\\
+ & \overline{\partial_{A}}\varphi=0,
+\end{cases}
+\]
+which we recognize as (almost) Hitchin's equations. In other words,
+the moduli space of vacua of $SYM[C]$ in the low energy limit is
+\[
+M_{C}\left[G\right]=\left\{ \mbox{solutions to }(\star)\right\} /\left\{ \mbox{gauge transformations}\right\} =\mathcal{M}_{H}.
+\]
+
+\begin{rem*}
+We took $\phi^{1}=\phi^{2}=\phi^{3}=0$ above. If we don't, SUSY also
+imposes equations on $\phi^{1},\phi^{2},\phi^{3}$: 
+\begin{align*}
+d_{A}\phi^{i} & =0, & \left[\varphi,\phi^{i}\right] & =0, & \left[\phi^{i},\phi^{j}\right] & =0.
+\end{align*}
+But, at a generic point in the moduli space, these equations won't
+have any nontrivial solutions, so the assumption that $\phi^{j}=0$
+isn't much of an imposition. 
+\end{rem*}
+The full moduli space of vacua has a Coulomb branch---identified with
+the Hitchin moduli space---and Higgs branches attached to the specific
+other points where nontrivial solutions for the $\phi^{j}$ exist.
+(Unfortunate nomenclature: the moduli of Higgs bundles is the space
+of solutions that live on the Coulomb branch...)
+
+
+\section{Compactification from (2,0) 6D Theory}
+
+Now let's talk about where that pesky $R$ factor came from. It turns
+out that there's a famous 6D $N=\left(2,0\right)$ QFT. It doesn't
+have a conventional Lagrangian description (or even a space of fields).
+Instead, the inputs are a 6-dimensional manifold, together with a
+Lie algebra $\mathfrak{g}$. Call this theory $X_{\mathfrak{g}}$.
+It has the following properties:
+\begin{itemize}
+\item $X_{\mathfrak{g}}$ has $N=\left(2,0\right)$ SUSY in $d=6$. 
+\item $X_{\mathfrak{g}}$ has no parameters---no coupling constants or scale,
+and the strength of the interaction can't be perturbed.
+\item $X_{\mathfrak{g}}$ is conformally invariant. 
+\end{itemize}
+Despite its unconventional description, we can still compactify $X_{\mathfrak{g}}$
+to obtain lower-dimensional theories. In fact, 5D SYM is $X_{\mathfrak{g}}\left[S^{1}\right]$,
+where the $R$ is the length of the $S^{1}$. So, $\mathcal{M}_{H}$
+is obtained as the moduli space associated to $X_{\mathfrak{g}}\left[C\times S^{1}\right]$.
+We could perform this compactification in either order: $\mathcal{M}_{H}$
+can also be obtained as the moduli space associated to the theory
+$X_{\mathfrak{g}}\left[C\right]$ compactified on $S^{1}$. \cite{GMN}
+use this observation to produce canonical Darboux coordinate systems
+on $\mathcal{M}_{H}$ and construct Calabi-Yau metrics in these coordinate
+systems. 
+
+Some examples of information we can obtain from this perspective:
+\begin{itemize}
+\item Compactify $X_{\mathfrak{g}}$ on $C$ first to get a 4d $N=2$ supersymmetric
+gauge theory with with Coulomb branch $\mathcal{B}$. Then, $\mathcal{B}$
+is actually the Hitchin base, i.e., $\mathcal{M}_{H}\rightarrow\mathcal{B}$
+with generic fiber a torus. Points $u\in\mathcal{B}$ correspond to
+spectral curves $\Sigma_{u}\subset T^{*}C$, also known as ``Seiberg-Witten
+curves.''
+\item $\mathcal{M}_{H}$ is automatically hyperkahler because of supersymmetry.
+\end{itemize}
+
+%% Bibliography
+\begin{thebibliography}{AB}
 \bibitem[AB]{AB}M.~F.~Atiyah and R.~Bott, The Yang-Mills equations
 over Riemann surfaces. Philos.~Trans.~Roy.~Soc. London A 308 (1982)
 523--615.
