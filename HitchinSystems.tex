@@ -95,14 +95,14 @@ Local study....
 \chapter{Teichmueller Theory}
 
 
-%% Matthew's talk #1 
+%% Matthew's talk #1
 \chapter{Construction of the Hitchin Moduli Space}
 
 
 This talk closely follows \cite{H1}. In this chapter, it is shown
 that the Hitchin moduli space $\mathcal{M}_{H}$ is a smooth manifold
 of dimension $12(g-1)$. We also prove that $\mathcal{M}_{H}$ is
-equipped with a complete hyperkahler metric. 
+equipped with a complete hyperkahler metric.
 
 
 \section{Definitions}
@@ -111,14 +111,14 @@ Let $M$ be a Riemannian surface, $P\rightarrow M$ a principal $G=SO\left(3\right
 $V$ the associated rank 2 vector bundle, and $\mathcal{G}$ the group
 of gauge transformations ($\mathcal{G}=Map\left(M,G\right)$). Recall
 that for a connection $A$ on $P$ and $\Phi\in\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)$,
-the self-dual equations are 
+the self-dual equations are
 \begin{align*}
 \tag{\ensuremath{\star}}F_{A}+\left[\Phi,\Phi^{*}\right] & =0,\\
 \overline{\partial_{A}}\Phi & =0
 \end{align*}
 
 
-For a connection $A$, $u\in\mathcal{G}$ acts by 
+For a connection $A$, $u\in\mathcal{G}$ acts by
 \[
 u\left(A\right)=uAu^{-1}-\left(du\right)u^{-1}
 \]
@@ -129,14 +129,14 @@ u\left(A\right)=uAu^{-1}-\left(du\right)u^{-1}
 for a section $s$ of $V$.
 
 For $\Phi\in\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)$, $u$
-acts by 
+acts by
 \[
 u\left(\Phi\right)=u\Phi u^{-1},
 \]
 where we regard $adP\otimes\mathbb{C}$ as the bundle of trace-zero
 endomorphisms of $V$.
 \begin{defn}
-The Hitchin moduli space is 
+The Hitchin moduli space is
 \[
 \mathcal{M}_{H}:=\left\{ \mbox{solutions to (}\star\mbox{)}\right\} /\mathcal{G}.
 \]
@@ -148,7 +148,7 @@ The Hitchin moduli space is
 \section{Summary of results}
 
 Let $V$ be a rank 2, odd degree vector bundle over a Riemannian surface
-$M$. Then, 
+$M$. Then,
 \begin{itemize}
 \item $\mathcal{M}_{H}$ is a smooth manifold of dimension $12\left(g-1\right)$.
 \item $\mathcal{M}_{H}$ has a natural metric.
@@ -163,7 +163,7 @@ $\left(\star\right)$ $\implies$ $\mathcal{G}$ acts freely on $\left(\star\right)
 
 First, to get the expected dimension, we compute the dimension of
 the tangent space to $\mathcal{M}_{H}$ at a regular point (i.e.,
-one with trivial isotropy group). 
+one with trivial isotropy group).
 
 
 \subsection{Idea of Proof}
@@ -180,38 +180,40 @@ using the regular value theorem.
 
 Let $\left(\dot{A},\dot{\Phi}\right)\in\Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)$.
 To get the linearization of $(\star$), fix a base point $\left(A,\Phi\right)$
-and look at 
+and look at
 \[
 \left.\frac{d}{dt}\right|_{t=0}\left(\star\right)\left(A+t\dot{A},\Phi+t\dot{\Phi}\right).
 \]
-Recalling that $F_{A}=dA+A\wedge A$, the first equation becomes 
+Recalling that $F_{A}=dA+A\wedge A$, the first equation becomes
 \[
 d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right]=0,
 \]
-and the second is 
+and the second is
 \[
 \overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi=0.
 \]
 
 
 $\left(\dot{A},\dot{\Phi}\right)$ arises from an infinitesimal gauge
-transformation $\dot{\psi}\in\Omega_{M}^{0}\left(adP\right)$ if 
+transformation $\dot{\psi}\in\Omega_{M}^{0}\left(adP\right)$ if
 \begin{align*}
 \dot{A} & =d_{A}\dot{\psi}, & \dot{\Phi} & =\left[\Phi,\dot{\psi}\right].
 \end{align*}
-Let 
+Let
 \begin{eqnarray*}
 d_{1}:\Omega_{M}^{0}\left(adP\right) & \longrightarrow & \Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)\\
 \dot{\psi} & \mapsto & \left(d_{A}\dot{\psi},\left[\Phi,\dot{\psi}\right]\right)
 \end{eqnarray*}
-and 
+and
 \begin{eqnarray*}
-d_{2}:\Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right) & \longrightarrow & \Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
-\left(\dot{A},\dot{\Phi}\right) & \mapsto & \left(d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right],\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi\right).
+d_{2}:\Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right) & \longrightarrow &
+\Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
+\left(\dot{A},\dot{\Phi}\right) & \mapsto &
+\left(d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right],\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi\right).
 \end{eqnarray*}
 Then, $d_{1},d_{2}$ define an \emph{elliptic complex} with index
 $3\left(2-2g\right)-6\left(g-1\right)=12\left(1-g\right)$. The Atiyah-Singer
-index theorem then says that 
+index theorem then says that
 \[
 \dim H^{0}-\dim H^{1}+\dim H^{2}=12\left(1-g\right).
 \]
@@ -222,39 +224,41 @@ index theorem then says that
 
 Now, a short digression into elliptic complexes. Let $X$ be a manifold,
 $\pi:T^{*}X\rightarrow X$ be projection onto the base, and $\left\{ E_{k}\rightarrow X\right\} $
-a collection of vector bundles over $X$. 
+a collection of vector bundles over $X$.
 \begin{defn}
-A chain complex 
+A chain complex
 \[
 \xymatrix{\cdots\ar[r] & \Gamma\left(E_{k-1}\right)\ar[r]^{P_{k-1}} & \Gamma\left(E_{k}\right)\ar[r]^{P_{k}} & \Gamma\left(E_{k+1}\right)\ar[r] & \cdots}
 \]
-is \textbf{elliptic} if the corresponding sequence of symbols 
+is \textbf{elliptic} if the corresponding sequence of symbols
 \[
 \xymatrix{\cdots\ar[r] & \pi^{*}E_{k-1}\ar[r]^{\sigma\left(P_{k-1}\right)} & \pi^{*}E_{k}\ar[r]^{\sigma\left(P_{k}\right)} & \pi^{*}E_{k+1}\ar[r] & \cdots}
 \]
 is exact.\end{defn}
 \begin{example*}
 Let $P:E_{1}\rightarrow E_{2}$ be a differential operator. Then,
-the complex 
+the complex
 \[
 \xymatrix{0\ar[r] & \Gamma\left(E_{1}\right)\ar[r]^{P} & \Gamma\left(E_{2}\right)\ar[r] & 0}
 \]
-is elliptic means that 
+is elliptic means that
 \[
 \xymatrix{0\ar[r] & \pi^{*}E_{1}\ar[r]^{\sigma\left(P\right)} & \pi^{*}E_{2}\ar[r] & 0}
 \]
 is exact, i.e., that $\sigma\left(P\right):\pi^{*}E_{1}\rightarrow\pi^{*}E_{2}$
 is an isomorphism. Recall that this is the ``usual'' definition
-of elliptic differential operator. 
+of elliptic differential operator.
 \end{example*}
-Now, return to our elliptic complex. 
+Now, return to our elliptic complex.
 
 \[
-\xymatrix{\Omega_{M}^{0}\left(adP\right)\ar[r]^-{d_{1}} & \Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)\ar[r]^-{d_{2}} & \Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
+\xymatrix{\Omega_{M}^{0}\left(adP\right)\ar[r]^-{d_{1}} & \Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)\ar[r]^-{d_{2}} &
+\Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
 \dot{\psi}\ar@{|->}[r] & \left(d_{A}\dot{\psi},\left[\Phi,\dot{\psi}\right]\right)\\
- & \left(\dot{A},\dot{\Phi}\right)\ar@{|->}[r] & \left(d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right],\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi\right)
+ & \left(\dot{A},\dot{\Phi}\right)\ar@{|->}[r] &
+ \left(d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right],\overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi\right)
 }
-\] 
+\]
 
 By construction, we're interested in $H^{1}$ of this complex: $H^{0}=\ker d_{1}$
 is the covariantly constant $\dot{\psi}$ which commute with $\Phi$.
@@ -264,7 +268,7 @@ $d_{2}^{*}$, we can show that $H^{2}=0$ as well \cite{H1}. Hence,
 \[
 -\dim H^{1}=12\left(1-g\right),
 \]
-i.e., for a regular point $\left(A,\Phi\right)$, 
+i.e., for a regular point $\left(A,\Phi\right)$,
 \[
 \boxed{\dim T_{\left(A,\Phi\right)}\mathcal{M}_{H}=12\left(g-1\right)}.
 \]
@@ -273,57 +277,58 @@ i.e., for a regular point $\left(A,\Phi\right)$,
 
 \subsection{$\mathcal{M}_{H}$ is a smooth manifold}
 
-This is a sketch, for complete details see \cite{H1}. 
+This is a sketch, for complete details see \cite{H1}.
 \begin{defn}
 $\left(A,\Phi\right)$ is a \textbf{regular point} if the isotropy
 group of $\left(A,\Phi\right)$ is the identity (i.e., there are no
 nontrivial gauge transformations fixing this point).
 \end{defn}
 Recall that infinitesimally, these are the points where there are
-no nonzero solutions to $d_{1}\dot{\psi}=0$. 
+no nonzero solutions to $d_{1}\dot{\psi}=0$.
 
 Let $\left(\mathcal{A}\times\Omega\right)_{0}$ denote the open set
-of regular points in $\mathcal{A}\times\Omega$, and 
+of regular points in $\mathcal{A}\times\Omega$, and
 \[
 B:=\left(\mathcal{A}\times\Omega\right)_{0}/\mathcal{G}.
 \]
 By construction, $B$ is a Banach manifold with the quotient topology.
-We have the map 
+We have the map
 \[
 d_{1}^{*}:\Omega_{M}^{1}\left(adP\right)\oplus\Omega_{M}^{1,0}\left(adP\otimes\mathbb{C}\right)\longrightarrow\Omega_{M}^{0}\left(adP\right).
 \]
 Define a \emph{slice} of $\mathcal{M}_{H}$ to be $\ker d_{1}^{*}$,
 at some fixed $\left(A_{0},\Phi_{0}\right)$---then, the slices provide
-coordinate patchs for $B$. Set 
+coordinate patchs for $B$. Set
 \begin{eqnarray*}
 f:\ker d_{1}^{*} & \longrightarrow & \Omega_{M}^{2}\left(adP\right)\oplus\Omega_{M}^{2}\left(adP\otimes\mathbb{C}\right)\\
 \left(A,\Phi\right) & \mapsto & \left(F_{A}+\left[\Phi,\Phi^{*}\right],\overline{\partial_{A}}\Phi\right);
 \end{eqnarray*}
 then, $f^{-1}\left(0,0\right)$ is a smooth submanifold of $\ker d_{1}^{*}$
-with dimension $12(g-1)$. 
+with dimension $12(g-1)$.
 
 Since $\ker d_{1}^{*}$ form coordinate patches for $B$, the remainder
 of the proof is just arguing that the $\ker d_{1}^{*}$ patch together
-to form a smooth manifold. 
+to form a smooth manifold.
 
 
 \section{The tangent space}
 
 Thanks to our results in the previous section, we have an explicit
-description of the tangent space to $\mathcal{M}_{H}$: 
+description of the tangent space to $\mathcal{M}_{H}$:
 \[
-T_{\left(A,\Phi\right)}\mathcal{M}_{H}=\left\{ \left(\dot{A},\dot{\Phi}\right)\left|\begin{matrix}d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right]=0,\\
+T_{\left(A,\Phi\right)}\mathcal{M}_{H}=\left\{
+\left(\dot{A},\dot{\Phi}\right)\left|\begin{matrix}d_{A}\dot{A}+\left[\dot{\Phi},\Phi^{*}\right]+\left[\Phi,\dot{\Phi}^{*}\right]=0,\\
 \overline{\partial_{A}}\dot{\Phi}+\dot{A}^{0,1}\wedge\Phi=0,\\
 d_{A}^{*}\dot{A}+Re\left[\Phi^{*},\dot{\Phi}\right]=0.
-\end{matrix}\right.\right\} 
+\end{matrix}\right.\right\}
 \]
-The third equation appears because $d_{1}^{*}\left(\dot{A},\dot{\Phi}\right)=d_{A}^{*}\dot{A}+Re\left[\Phi^{*},\dot{\Phi}\right]$. 
+The third equation appears because $d_{1}^{*}\left(\dot{A},\dot{\Phi}\right)=d_{A}^{*}\dot{A}+Re\left[\Phi^{*},\dot{\Phi}\right]$.
 
 
 \section{$\mathcal{M}_{H}$ has a complete hyperkahler metric}
 
 Recall from Sean's talk that the metric on $\mathcal{A}\times\Omega$
-given by 
+given by
 \[
 g\left((\psi,\phi),\left(\psi,\phi\right)\right)=2i\int_{M}Tr\left(\psi^{*}\psi+\phi\phi^{*}\right)
 \]
@@ -342,13 +347,13 @@ defined by a geodesic $\gamma$ converging to a point not in $\mathcal{M}_{H}$.
 Because $g$ is $\mathcal{G}$-invariant, we can look at $\tilde{\mathcal{M}_{H}}\subset\mathcal{A}\times\Omega$.
 Lift $\gamma$ to a horizontal $\tilde{\gamma}$ in $\tilde{\mathcal{M}}_{H}$.
 $\tilde{\gamma}$ still defines a Cauchy sequence in $\tilde{\mathcal{M}}_{H}$,
-so we have 
+so we have
 \[
 ||A_{n}-\overline{A}||_{L^{2}}^{2}+||\Phi_{n}-\overline{\Phi}||_{L^{2}}^{2}\leq C
 \]
  for some $C$ as $\left(A_{n},\Phi_{n}\right)\rightarrow\left(\overline{A},\overline{\Phi}\right)$
 (where $\left(\overline{A},\overline{\Phi}\right)$ is the limiting
-point not in $\mathcal{M}_{H}$). 
+point not in $\mathcal{M}_{H}$).
 
 Now, we apply Uhlenbeck's compactification theorem to show that there's
 a gauge transformation taking $\left(\overline{A},\overline{\Phi}\right)$
@@ -357,11 +362,11 @@ to a solution of $(\star)$:
 [Uhlenbeck] There are constants $\epsilon_{1}$, $M>0$ such that
 any connection $A$ on the trivial bundle over $\overline{B}^{4}$
 with $||F_{A}||_{L^{2}}<\epsilon_{1}$ is gauge equivalent to a connection
-$\tilde{A}$ over $B^{4}$ with 
+$\tilde{A}$ over $B^{4}$ with
 \begin{enumerate}
 \item $d^{*}\tilde{A}=0$,
-\item $\lim_{\left|x\right|\rightarrow1}\tilde{A}_{r}=0$, and 
-\item $||\tilde{A}||_{L_{1}^{2}}\leq M||F_{\tilde{A}}||_{L^{2}}$. 
+\item $\lim_{\left|x\right|\rightarrow1}\tilde{A}_{r}=0$, and
+\item $||\tilde{A}||_{L_{1}^{2}}\leq M||F_{\tilde{A}}||_{L^{2}}$.
 \end{enumerate}
 Moreover for suitable constants $\epsilon_{1}$, $M$, $\tilde{A}$
 is uniquely determined by these properties, up to $\tilde{A}\mapsto u_{0}\tilde{A}u_{0}^{-1}$
@@ -372,17 +377,17 @@ In particular, we can use the following corrollary:
 For any sequence of ASD connections $A_{\alpha}$ over $\overline{B}^{4}$
 with $||F\left(A_{\alpha}\right)||_{L^{2}}\leq\epsilon$, there is
 a subsequence $\alpha'$ and gauge equivalent connections $\tilde{A}_{\alpha'}$
-which converge in $C^{\infty}$ on the open ball. 
+which converge in $C^{\infty}$ on the open ball.
 \end{cor*}
 Therefore, there's a gauge transformation taking $\left(\overline{A},\overline{\Phi}\right)$
 to a solution of $(\star)$. This is a contradiction, so $\mathcal{M}_{H}$
-is complete. 
+is complete.
 
 
 \subsection{Hyperkahler structure}
 
 Recall from Sean's talk that there's a symplectic form on $\mathcal{M}_{H}$
-given by 
+given by
 \[
 \omega\left((\psi_{1},\phi_{1}),\left(\psi_{2},\phi_{2}\right)\right)=\int_{M}Tr\left(\phi_{2}\psi_{1}-\phi_{1}\psi_{2}\right).
 \]
@@ -396,7 +401,7 @@ symplectic structure is just the Kahler form associated to the metric
 \[
 g=2i\int_{M}Tr\left(\psi^{*}\psi+\phi\phi^{*}\right),
 \]
-and has moment map 
+and has moment map
 \[
 \mu_{1}\left(A,\Phi\right)=F_{A}+\left[\Phi,\Phi^{*}\right].
 \]
@@ -424,6 +429,127 @@ $\mathcal{M}_{H}$ is...
 
 
 \chapter{Meromorphic Connections and Stokes Data}
+This talk is presented by Honghao on  April 22nd, 2015. The references is the work of P.~Boalch.
+
+The talk has two parts. The first parts reviewed the three descriptions of the Hitchin moduli space: Dolbeault, De-Rham and Betti. The relation of the last two is also known as the Riemann-Hilbert correspondence. The correspondence can be generalized to punctured discs, and it requires additional information on each side. The additional packages on the two sides contain meromorphic connections and Stokes data.
+
+\medskip
+\textbf{Perspectives of the Hitchin space}
+
+A definition first.
+
+Let $X$ be a Riemann surface (probably not compact), and $G$ be a Lie group over $\mathbb{C}$. The character variety is defined to be
+$$\mathcal {M} = Hom (\pi_1(X),G)/G.$$
+
+The three descriptions of Hitchin's moduli space:
+\begin{enumerate}
+  \item (Dolbeault) $\mathcal{M}_{Dol}$ the moduli space of Higgs bundles, which consists of pairs $(E,\Phi)$, where $E$ is a rank $n$ degree zero holomorphic vector bundle and $\Phi\in \Gamma(End(E)\otimes \Omega^1)$ a Higgs field.
+  \item (De-Rham) $\mathcal{M}_{DR}$ the moduli space of connections on rank $n$ holomorphic vector bundles, consisting of pairs $(V, \nabla)$ with $\nabla: V\rightarrow V \otimes \Omega^1$ a holomorphic connection.
+  \item (Betti) $\mathcal{M}_{B}$ the conjugacy classes of representation of the fundamental group of $X$. Notice this is the character variety of the compact Riemann surface with $G=GL(n,\mathbb{C})$.
+\end{enumerate}
+
+From Dolbeault to De-Rham: naturally diffeomorphic as real manifolds via the non-abelian Hodge correspondence, but not complex analytically isomorphic.
+
+From De-Rham to Betti: Locally, the connection can be written as $\nabla = d + A$. Since $X$ is compact, homomorphic is the same as algebraic and $V$ and $\nabla$ are holomorphic implies $A\in GL(n,\mathbb{C})$. The flatness of the connection implies the holonomy only depends on the homotopy type, thus the representation of the fundamental group $\pi_1(X)$.
+
+Example: when $n=1$ that is $G = \mathbb{C}^*$, then
+\begin{enumerate}
+  \item $\mathcal{M}_{Dol} \cong T^*Jac(X)$.
+  \item $\mathcal{M}_{DR} \rightarrow Jac(X)$ a twisted cotangent bundle of the Jacobian of $\Sigma$; it is an affine bundle modeled on the cotangent bundle.
+  \item $\mathcal{M}_{B} \cong (\mathbb{C}^*)^{2g}$ is isomorphic to $2g$ copies of $\mathbb{C}^*$.
+\end{enumerate}
+
+Alert: The isomorphism (Riemann-Hilbert correspondence) $\mathcal{M}_{DR} \rightarrow \mathcal{M}_{B}$ involves exponential and not algebraic. And conversely, no algebraic isomorphism $\mathcal{M}_{B}\rightarrow \mathcal{M}_{DR}$ exists.
+
+Another argument: $\mathcal{M}_{B}$ is affine, and it does not have compact subvarieties. Thus so is $\mathcal{M}_{DR}$. However, $\mathcal{M}_{Dol}$ has such (zero section), which make it impossible to have complex analytic isomorphism $\mathcal{M}_{DR} \rightarrow \mathcal{M}_{Dol}$. On the other hand, the abelian Hodge theory and Dolbeault isomorphism gives rise to a non-holomorphic isomorphism $\mathcal{M}_{DR} \rightarrow \mathcal{M}_{Dol}$.
+
+A couple of remarks,
+
+1) Dolbeault space has algebraic Hamiltonian integrable system (presented by Lei, also known as the Hitchin system?), there is a proper map
+$$\mathcal{M}\rightarrow \mathbb{H}$$
+to a vector space of half of the dimension. The generic fibres of the map are abelian varieties. In the abelian case, the space is product of $\mathbb{C}^g\times Jac(X)$, but in general, the fibres vary non-trivially and there are singular fibres.
+
+2) The mapping class group has an natural (symplectic, algebraic) action on the moduli space, through the Betti description.
+
+
+\medskip
+\textbf{Airy's equation}
+
+Consider $X = \mathbb{P}^1 = \mathbb{C}_z \cup \{\infty\} = \{0\}\cup \mathbb{C}_w$. The general Airy's equation: $f^{''} = z^n f$. Write $\nabla = d - A$, the ODE corresponds to a holomorphic connection on $\mathbb{C}_z$, as in
+$$\frac{d}{dz}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}
+  = \begin{pmatrix}
+  0 & 1 \\ z^n & 0
+  \end{pmatrix}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}.$$
+However, this connection is singular at infinity. Let $w =1/z$, then $z\partial_z = - w\partial_w$. The ODE becomes $((z\partial_z)^2 - (z\partial_z) - z^{n+2})f = 0$, which in the new coordinate is $((w\partial_w)^2 + (w\partial_w) - w^{-n-2})f = 0$, that is
+$$\frac{\partial^2f}{\partial w^2} + \frac{2}{w}\frac{\partial f}{\partial w} - \frac{1}{w^{n+4}}f =0.$$
+In terms of connection, this is
+$$\frac{d}{dw}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}
+  = \begin{pmatrix}
+  0 & 1 \\ \frac{1}{w^{n+4}} & \frac{2}{w}
+  \end{pmatrix}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}.$$
+The connection $A$ can be expanded as
+$$A = \frac{A_{n+4}}{w^{n+4}} + \frac{A_1}{w} + \text{holomorphic terms},$$
+where $A_i \in \mathfrak{gl}(n,\mathbb{C})$.
+
+The irregular type $Q$ of this connection at infinity is
+$$dQ = \frac{A_{n+4}}{w^{n+4}} = \frac{1}{w^{n+4}}\begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}$$
+
+\medskip
+\textbf{Regular singularity}
+
+A meromorphic connection has regular singularity if its singular pole has order ar most $1$. Deligne showed a version of the correspondence.
+
+Deligne's Riemann-Hilbert correspondence: If $X$ is a Riemann-Surface with punctures and $G =GL(n,\mathbb{C})$, then the character variety corresponds to the space of algebraic connections with regular singularities at the punctures.
+
+\medskip
+\textbf{Stokes Data}
+
+Let $D$ be an effective divisor on $\mathbb{P}^1$. A meromorphic connection $\nabla$ on $D$ is a map $\nabla: V\rightarrow V\otimes K(D)$ satisfying the Leibniz rule. Locally at an irregular singular point, $\nabla = d - A$ and $A = dQ + \Lambda \frac{dz}{z}$, $Q$ is a matrix of meromorphic functions. Choose a framing so that $Q$ is diagonal, that is $Q = \text{diag}(q_1,q_2,\dotsb, q_n)$. Let $q_{ij}(z)$ be the most singular term on $q_i - q_j$.
+
+Some definitions.
+\begin{itemize}
+  \item Let $S^1$ parameterize the rays around $z$. If $d_1,d_2\in S^1$, define $Sect(d_1,d_2)$ be the open sector sweeping from $d_1$ to $d_2$.
+  \item The anti-Stokes directions $\mathbb{A} \subset S^1$ are the directions $d\in S^1$ such that for some $i~\neq~j$,$q_{ij}~\in~\mathbb{R}_{<0}$ along this ray $d$.
+  \item The roots of $d$ are the ordered pairs (ij) supporting $d$:
+  $$Roots(d) := \{(ij)| q_{ij}\in \mathbb{R}_{<0} \text{ along } d\}.$$
+  \item The multiplicity of $d$ is the number of roots supporting $d$.
+  \item the group of Stokes factors associated to $d$ is
+  $$Sto_d(A) := \{K\in G |(K)_{ij} = \delta_{ij}, \text{ unless }(ij) \text{ is a root of } d\}.$$
+  This is a unipotent subgroup of $G = GL(n,\mathbb{C})$.
+\end{itemize}
+
+Remarks: The anti-Stokes directions are those where the roots decays rapidly towards the singular point.
+
+To see the stokes group is unipotent. First, $i\neq j$ implies the diagonals are always $1$. Second, if $(ij)$ is a root, $(ji)$ won't be, which implies an ordering. Third, transitivity, as $q_{ij}, q_{jk}\in \mathbb{R}_{<0}$, then $q_{ik} = q_{ij} + q_{jk}\in \mathbb{R}_{<0}$. By a permutation, the Stokes matrix becomes upper triangular, with diagonals equal to $1$, which is obviously an unipotent subgroup, and the property of which is invariant under permutation conjugation.
+
+Since $q_{ij}(z) = a/z^{k-1}$, there is a $\pi /(k-1)$ rotational symmetry. ($k$ is the order of the pole.) Notice that in the generic situation, the leading terms of $q_i$ do not cancel out. $q_{ij}$ has a $2\pi /(k-1)$ symmetry, and $q_{ji}$ contributes the remaining. Let $\textbf{d}=(d_1,\dotsb,d_l)$ be the set of anti-Stokes directions up to this symmetry, then $n(n-1)/2 = \sum_{i=1}^l Mult(d_i)$.
+
+A key result.
+\begin{enumerate}
+  \item The product of the groups of Stokes factors in a half-period is isomorphic to a subgroup of G as a variety.
+    $$\prod_{d\in \textbf{d}}Sto_d(A) \cong PU_+P^{-1},$$
+    via $(K_1,\dotsb,K_l)\mapsto K_l \cdot \cdot \cdot K_2K_1$, and $P$ is a permutation group arranging the anti-Stokes directions in order.
+  \item The product of all groups of Stokes factors is isomorphic to the variety:
+    $$\prod_{d\in \mathbb{A}}Sto_d(A) \cong (U_+\times U_-)^{k-1}.$$
+\end{enumerate}
+
+Suppose $E_{ij}$ is the matrix with the $(ij)$ entry $1$ and $0$ otherwise. It suffices to show any upper triangular matrix $U$ can be decomposed uniquely into a product of $(I+t_{ij}E_{ij})$, for $1\leq i < j\leq n$. Notice that $E_{ij}E_{kl} = \delta_{jk}E_{il}$. Expanding the product, $t_{12}, t_{23},\dotsb$ the sub-diagonal entries are determined immediately. Followed by the next sub-diagonal and so on. The second fact follows the first one easily.
+
+The second product is the space of Stokes data $Sto(Q)$. For $k=2$, the (local version) irregular Riemann-Hilbert correspondence is
+$$\{\text{Connections of singular type Q}\}/\mathcal {G} \cong \mathfrak{t} \times Sto(Q),$$
+where $\mathcal {G}$ is the group of holomorphic maps from the unit disk to $G$ taking $z=0$ to $1_G$, and $\mathfrak{t}$ is an Cartan subalgebra fixed a priori.
 
 
 \chapter{The Langlands Program and Relations to Geometric Langlands}
@@ -457,7 +583,7 @@ Moore, and Neitzke \cite{GMN} use this approach to construct a canonical
 coordinate system on the Hitchin moduli space. The goal of this talk
 is to explain some of the language of supersymmetric quantum field
 theories, and describe how we can obtain $\mathcal{M}_{H}$ from a
-particular class of such theories. 
+particular class of such theories.
 
 
 \subsection{Supersymmetry}
@@ -466,7 +592,7 @@ Consider $\mathbb{R}^{n}$. The \textbf{Poincare group} is the group
 of translations and rotations of this space: $G=ISO(n)\cong\mathbb{R}^{n}\rtimes SO(n)$.
 (In Minkowski signature, say for $\mathbb{R}^{n,1}$, we might write
 $ISO(n,1)$ instead). Recall that there's a spin group defined as
-a double cover of $SO(n)$: 
+a double cover of $SO(n)$:
 \[
 \xymatrix{1\ar[r] & \mathbb{Z}_{2}\ar[r] & Spin(n)\ar[r] & SO(n)\ar[r] & 1.}
 \]
@@ -484,29 +610,29 @@ any spinor representation has the form $S^{\oplus N}$ for some $N$,
 or
 \item There are two distinct irreducible real spinor representations $S_{+},S_{-}$,
 and any spinor representation has the form $S_{+}^{\oplus N_{1}}\oplus S_{-}^{\oplus N_{2}}$
-for some $N_{1},N_{2}$. (This occurs in dimensions $n\equiv2,6\mod8$). 
+for some $N_{1},N_{2}$. (This occurs in dimensions $n\equiv2,6\mod8$).
 \end{itemize}
 Thus, when someone says $N=n$ or $N=\left(n_{1},n_{2}\right)$ supersymmetry,
 they are specifying which extension of the Poincare algebra they're
 referring to.
 
 The supersymmetry Lie algebra $\tilde{\mathfrak{g}}$ splits into
-an even and odd part: 
+an even and odd part:
 \[
 \tilde{\mathfrak{g}}=\mathfrak{g}^{0}\oplus\mathfrak{g}^{1},
 \]
 and is equipped with a skew-symmetric bracket $\left[\cdot,\cdot\right]:\tilde{\mathfrak{g}}\rightarrow\tilde{\mathfrak{g}}$
 which satisfies the Jacobi identity. Note that $\left[\mathfrak{g}^{1},\mathfrak{g}^{1}\right]\subset\mathfrak{g}^{0}$,
 $\mathfrak{g}^{0}=\mathfrak{g}$ (the Poincare algebra), and $\mathfrak{g}^{1}$
-is just a linear representation of $\mathfrak{g}^{0}$. 
+is just a linear representation of $\mathfrak{g}^{0}$.
 \begin{example*}
 For $N=2$ SUSY and $G=ISO(3,1)$, we'll be interested in a $\tilde{G}$
-whose Lie algebra has even part 
+whose Lie algebra has even part
 \[
 \mathfrak{g}^{0}=\mbox{\ensuremath{\mathfrak{iso}}}(3,1)\oplus\mathbb{C}.
 \]
 The abelian $\mathbb{C}$ factor is central in $\tilde{\mathfrak{g}}$,
-and has a canonical generator $Z$. 
+and has a canonical generator $Z$.
 \end{example*}
 
 \subsection{BPS States}
@@ -525,9 +651,9 @@ there's some structure:
 \item $\mathcal{H}^{1}$ splits into components $\mathcal{H}_{M}^{1}$,
 labeled by $M\in\mathbb{R}_{\geq0}$. $M^{2}$ is the eigenvalue of
 a quadratic Casimir operator in $ISO(3,1)$. Physically, it's the
-mass of the particle. 
+mass of the particle.
 \item For $N=2$ SUSY as in our prior example, we also have a central generator
-$Z\in\mathbb{C}$. Together, these give a decomposition 
+$Z\in\mathbb{C}$. Together, these give a decomposition
 \[
 \mathcal{H}^{1}=\bigoplus_{M,Z}\mathcal{H}_{M,Z}^{1}.
 \]
@@ -537,7 +663,7 @@ Fix some momentum $p_{rest}\in\left(\mathbb{R}^{3,1}\right)^{*}$
 with $||p_{rest}||^{2}=M^{2}$, and consider the subspace $\mathcal{H}_{M,Z}^{1,rest}$
 on which the subgroup of translations along $\mathbb{R}^{3,1}$ acts
 by $p_{rest}$. This is a representation of a subgroup $\tilde{G}_{rest}\subset\tilde{G}$
-with 
+with
 \[
 \tilde{G}_{rest}=SO\left(3\right)\ltimes\tilde{T},
 \]
@@ -551,15 +677,15 @@ representations of this Clifford algebra:
 \item If $M<\left|Z\right|$, then there are \emph{no} unitary representations
 of the Clifford algebra.
 \item If $M=\left|Z\right|$, the Clifford algebra is degenerate, and its
-unique unitary irrep $S$ has dimension $2^{4/2}=4$. 
+unique unitary irrep $S$ has dimension $2^{4/2}=4$.
 \item If $M>\left|Z\right|$, the Clifford algebra is nondegenerate, and
-its unique unitary irrep $S$ has dimension $2^{8/2}=16$. 
+its unique unitary irrep $S$ has dimension $2^{8/2}=16$.
 \end{itemize}
 States that satisfy $M=\left|Z\right|$ are called \textbf{BPS} (Bogomol'nyi,
 Prasad, Sommerfield) \textbf{states}, and as one might expect, they
 satisfy a set of differential equations depending on the field theory.
 The BPS states are those in which half of the supersymmetry generators
-are unbroken. 
+are unbroken.
 
 
 \subsection{Moduli of Vacua}
@@ -574,17 +700,17 @@ For scalar fields, these are labelled by the \textbf{vacuum expectation
 value} (VEV). The VEV of an operator is (as the name suggests) the
 expectation value of the operator in the vacuum (the quantum state
 with the lowest possible energy). We can label a vacuum state by its
-VEV, and this gives a moduli space of vacua. 
+VEV, and this gives a moduli space of vacua.
 
 For $N=2$ SUSY, the superalgebra has two representations with scalars:
 \textbf{vectormultiplets} (one complex scalar), and \textbf{hypermultiplets}
 (two complex scalars). This gives a local splitting of the moduli
-of vacua $\mathcal{M}$ as 
+of vacua $\mathcal{M}$ as
 \[
 \mathcal{M}=\mathcal{M}_{C}\oplus\mathcal{M}_{H},
 \]
 where $\mathcal{M}_{C}$ is the ``Coulomb branch'' (vectormultiplets),
-and $\mathcal{M}_{H}$ is the ``Higgs branch'' (hypermultiplets). 
+and $\mathcal{M}_{H}$ is the ``Higgs branch'' (hypermultiplets).
 
 
 \section{Compactification and Dimensional Reduction}
@@ -593,7 +719,7 @@ Compactification of a field theory is a process where, instead of
 considering a general space $X$, we consider $X=M\times C$ where
 $C$ is some compact space. Dimensional reduction is the limit of
 the compactified theory where the volume of the compact space is shrunk
-to zero, which produces an effective theory on the remaining dimensions. 
+to zero, which produces an effective theory on the remaining dimensions.
 \begin{example*}
 [Toy Example] Consider a field theory on $X=\mathbb{R}^{n}\times S_{R}^{1}$
 ($S_{R}^{1}$ is the circle of radius $R$). Let $\theta$ be a coordinate
@@ -609,7 +735,7 @@ Note that in quantum mechanics, $\hbar\lambda_{n}$ is the \emph{momentum}
 of eigenstate $n$, so as $R\rightarrow\infty$, all mometums except
 the trivial one also $\rightarrow\infty$. We should interpert $R\rightarrow0$
 as meaning that, for finite energy (and hence, finite momentum), the
-only eigenstate left is the trivial one. 
+only eigenstate left is the trivial one.
 
 If $\phi|_{x}$ is constant, it means that the field $\phi$ does
 not depend on $\theta$---the dimensional reduction of the theory
@@ -631,10 +757,10 @@ in one of the first lectures of the course. Consider classical Yang-Mills
 theory.
 
 Yang-Mills theory is a field theory defined for principal $G$-bundles
-$P\rightarrow X$, where $X$ is a 4-dimensional Riemannian manifold. 
+$P\rightarrow X$, where $X$ is a 4-dimensional Riemannian manifold.
 \begin{description}
 \item [{Fields}] Connections $A$ on $P$.
-\item [{Lagrangian}] 
+\item [{Lagrangian}]
 \[
 L\left(A\right)=\left|F_{A}\right|^{2}d\mu
 \]
@@ -644,26 +770,26 @@ Recall that from the Lagrangian, we obtain the action functional by
 \[
 S\left(A\right)=\int_{X}L\left(A\right)=\int_{X}\left|F_{A}\right|^{2}d\mu.
 \]
-The equations of motion for Yang-Mills theory are 
+The equations of motion for Yang-Mills theory are
 \[
 d_{A}^{*}F_{A}=0,
 \]
-and the instantons are the (anti) self-dual connections: 
+and the instantons are the (anti) self-dual connections:
 \[
 F_{A}=\pm*F_{A}.
 \]
 (Here, $*:\Omega_{X}^{2}\cong\Omega_{X}^{2}$ is the Hodge star operator).
 
-In local coordinates we can write $d_{A}=d+A$, where 
+In local coordinates we can write $d_{A}=d+A$, where
 \[
 A=A_{1}dx_{1}+A_{2}dx_{2}+A_{3}dx_{3}+A_{4}dx_{4}.
 \]
-Define 
+Define
 \[
 F_{ij}:=\left[\nabla_{i},\nabla_{j}\right]=\frac{\partial}{\partial x_{i}}A_{j}-\frac{\partial}{\partial x_{j}}A_{i}+\left[A_{i},A_{j}\right].
 \]
 Look at the self-dual connections. Then, the instanton equation $F_{A}^{-}=0$
-becomes 
+becomes
 \begin{eqnarray*}
 F_{12} & = & F_{34},\\
 F_{13} & = & -F_{24},\\
@@ -677,7 +803,7 @@ reduction in $\mathbb{R}^{2}$ coordinates: restrict to $A_{j}$ which
 are invariant under translation in $x_{3}$, $x_{4}$. Then, $A_{1}dx_{1}+A_{2}dx_{2}$
 defines a connection on $C$. Relabel $A_{3}=\phi_{1}$ and $A_{4}=\phi_{2}$,
 and define $\varphi=\phi_{1}-i\phi_{2}$; then the self-dual equations
-become 
+become
 \begin{eqnarray*}
 F_{A}-\frac{1}{2}i\left[\varphi,\varphi^{*}\right] & = & 0,\\
 \left[\nabla_{1}+i\nabla_{2},\varphi\right] & = & 0.
@@ -685,7 +811,7 @@ F_{A}-\frac{1}{2}i\left[\varphi,\varphi^{*}\right] & = & 0,\\
 If we think of $\varphi$ as defining a local section of $\Omega^{0}\left(C;ad(P)\otimes\mathbb{C}\right)$,
 and set $\Phi=\frac{1}{2}\varphi dz\in\Omega^{1,0}\left(ad\left(P\right)\otimes\mathbb{C}\right)$
 and $\Phi^{*}=\frac{1}{2}\varphi^{*}d\overline{z}\in\Omega^{0,1}\left(ad(P)\otimes\mathbb{C}\right)$,
-then the equations become 
+then the equations become
 \begin{eqnarray*}
 F_{A}+\left[\Phi,\Phi^{*}\right] & = & 0,\\
 \overline{\partial_{A}}\Phi & = & 0,
@@ -698,11 +824,11 @@ the usual Hitchin equations.
 Now, let's repeat the previous example, but including some supersymmetry.
 5D Super Yang-Mills theory admits a conventional Lagrangian description:
 Let $P$ be a principal $G$-bundle over $X$ (a 5-dimensional space).
-The theory has: 
+The theory has:
 \begin{description}
 \item [{Fields}] Connections $A$ on $P$, sections $\phi^{i}$ of $Ad\left(P\right)$
 ($i=1,\ldots,5$), and fermions.
-\item [{Lagrangian}] 
+\item [{Lagrangian}]
 \[
 L=\frac{R}{8\pi^{2}}Tr\left[\frac{1}{R^{2}}F_{A}\wedge*F_{A}+\sum_{i=1}^{5}d_{A}\phi^{i}\wedge*d_{A}\phi^{i}+\mbox{fermions}\right].
 \]
@@ -712,7 +838,7 @@ L=\frac{R}{8\pi^{2}}Tr\left[\frac{1}{R^{2}}F_{A}\wedge*F_{A}+\sum_{i=1}^{5}d_{A}
 \begin{enumerate}
 \item 5D SYM is well-defined as an effective field theory, below a certain
 energy scale. It is not obviously well-defined at arbitrarily high
-energies. 
+energies.
 \item There's this unusual $R$ factor appearing here that you should be
 suspicious of. We'll explain where this comes from at the end of the
 talk.
@@ -724,19 +850,19 @@ talk.
 Let's take $X=\mathbb{R}^{2,1}\times C$, where $C$ is a Riemann
 surface. Analogous to the classical case, when we compactify 5D SYM
 on $C$, we combine $\phi^{4}$ and $\phi^{5}$ into a complex-valued
-1-form on $C$: 
+1-form on $C$:
 \[
 \varphi=\left(\phi^{4}+i\phi^{5}\right)dz.
 \]
 Again, to do dimensional reduction, we require translation invariance---this
-time along $\mathbb{R}^{2,1}$. 
+time along $\mathbb{R}^{2,1}$.
 \begin{description}
 \item [{Question}] What are the classical field configurations in the compactified
 theory which preserve the supersymmetry? (Recall that these are the
 BPS states!)
 \end{description}
 Assuming $\phi^{1},\phi^{2},\phi^{3}=0$, the equations satisfied
-by the remaining fields are 
+by the remaining fields are
 \[
 \tag{\ensuremath{\star}}\begin{cases}
  & F_{A}+R^{2}\left[\varphi,\varphi^{*}\right]=0,\\
@@ -751,13 +877,13 @@ M_{C}\left[G\right]=\left\{ \mbox{solutions to }(\star)\right\} /\left\{ \mbox{g
 
 \begin{rem*}
 We took $\phi^{1}=\phi^{2}=\phi^{3}=0$ above. If we don't, SUSY also
-imposes equations on $\phi^{1},\phi^{2},\phi^{3}$: 
+imposes equations on $\phi^{1},\phi^{2},\phi^{3}$:
 \begin{align*}
 d_{A}\phi^{i} & =0, & \left[\varphi,\phi^{i}\right] & =0, & \left[\phi^{i},\phi^{j}\right] & =0.
 \end{align*}
 But, at a generic point in the moduli space, these equations won't
 have any nontrivial solutions, so the assumption that $\phi^{j}=0$
-isn't much of an imposition. 
+isn't much of an imposition.
 \end{rem*}
 The full moduli space of vacua has a Coulomb branch---identified with
 the Hitchin moduli space---and Higgs branches attached to the specific
@@ -775,10 +901,10 @@ Instead, the inputs are a 6-dimensional manifold, together with a
 Lie algebra $\mathfrak{g}$. Call this theory $X_{\mathfrak{g}}$.
 It has the following properties:
 \begin{itemize}
-\item $X_{\mathfrak{g}}$ has $N=\left(2,0\right)$ SUSY in $d=6$. 
+\item $X_{\mathfrak{g}}$ has $N=\left(2,0\right)$ SUSY in $d=6$.
 \item $X_{\mathfrak{g}}$ has no parameters---no coupling constants or scale,
 and the strength of the interaction can't be perturbed.
-\item $X_{\mathfrak{g}}$ is conformally invariant. 
+\item $X_{\mathfrak{g}}$ is conformally invariant.
 \end{itemize}
 Despite its unconventional description, we can still compactify $X_{\mathfrak{g}}$
 to obtain lower-dimensional theories. In fact, 5D SYM is $X_{\mathfrak{g}}\left[S^{1}\right]$,
@@ -789,7 +915,7 @@ can also be obtained as the moduli space associated to the theory
 $X_{\mathfrak{g}}\left[C\right]$ compactified on $S^{1}$. \cite{GMN}
 use this observation to produce canonical Darboux coordinate systems
 on $\mathcal{M}_{H}$ and construct Calabi-Yau metrics in these coordinate
-systems. 
+systems.
 
 Some examples of information we can obtain from this perspective:
 \begin{itemize}
@@ -810,7 +936,7 @@ over Riemann surfaces. Philos.~Trans.~Roy.~Soc. London A 308 (1982)
 
 \bibitem[B1]{B1}P.~Boalch, ``Geometry and Braiding of Stokes Data;
 Fission and Wild Character Varieties,'' Annals of Math.~\textbf{179}
-(2014) 301--365. http://annals.math.princeton.edu/wp-content/uploads/annals-v179-n1-p05-s.pdf 
+(2014) 301--365. http://annals.math.princeton.edu/wp-content/uploads/annals-v179-n1-p05-s.pdf
 
 \bibitem[B2]{B2}P.~Boalch, ``Hyperkaehler Manifolds and Nonabelian
 Hodge Theory of (Irregular) Curves,'' arXiv:1203.6607
@@ -831,30 +957,30 @@ arXiv:alg-geom/9507017
 
 \bibitem[FG]{FG}V.~Fock and A.~Goncharov, Moduli spaces of local
 systems and higher Teichmueller theory, Publ. Math. Inst. Hautes Etudes
-Sci. No. 103 (2006), 1\textendash{}211. 
+Sci. No. 103 (2006), 1\textendash{}211.
 
 \bibitem[GMN]{GMN} D.~Giaotto, G.~Moore, and A.~Neitzke, Wall-crossing,
 Hitchin systems, and the WKB approximation. arXiv:0907.3987
 
 \bibitem[H1]{H1}N.~Hitchin, ``The self-duality equations on a Riemann
-surface,'' Proc. Long. Math. Soc. 55 (1987) 59--126. 
+surface,'' Proc. Long. Math. Soc. 55 (1987) 59--126.
 
 \bibitem[H2]{H2}N.~Hitchin, ``Stable bundles and integrable systems,''
-Duke Math J. 54 (1987) 91--114. 
+Duke Math J. 54 (1987) 91--114.
 
 \bibitem[H3]{H3}N.~Hitchin, ``Lie Groups and Teichmueller Space,''
-Topology 31 (1992) 449--473. 
+Topology 31 (1992) 449--473.
 
 \bibitem[HT]{HT}T.~Hausel and M.~Thaddeus. Mirror symmetry, Langlands
 duality, and the Hitchin system. Invent. Math., 153 (1):197\textendash{}229,
-2003. 
+2003.
 
 \bibitem[KW]{KW}A.~Kapustin and E.~Witten, ``Electric-Magnetic
 Duality and the Geometric Langlands Program,'' CNTP 1 (2007()1--236.
 arXiv:hep-th/0604151
 
 \bibitem[N]{N}A.~Neitzke, ``Hitchin systems in N=2 field theory,''
-https://www.ma.utexas.edu/users/neitzke/expos/hitchin-systems.pdf 
+https://www.ma.utexas.edu/users/neitzke/expos/hitchin-systems.pdf
 
 \bibitem[NS]{NS}M.~S.~Narasimhan and C.~S.~Seshadri, `Stable
 and unitary vector bundles on a compact Riemann surface,' Ann.~of
