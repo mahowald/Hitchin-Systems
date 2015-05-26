@@ -1,0 +1,122 @@
+\chapter{Meromorphic Connections and Stokes Data}
+This talk is presented by Honghao on  April 22nd, 2015. The references is the work of P.~Boalch.
+
+The talk has two parts. The first parts reviewed the three descriptions of the Hitchin moduli space: Dolbeault, De-Rham and Betti. The relation of the last two is also known as the Riemann-Hilbert correspondence. The correspondence can be generalized to punctured discs, and it requires additional information on each side. The additional packages on the two sides contain meromorphic connections and Stokes data.
+
+\medskip
+\textbf{Perspectives of the Hitchin space}
+
+A definition first.
+
+Let $X$ be a Riemann surface (probably not compact), and $G$ be a Lie group over $\mathbb{C}$. The character variety is defined to be
+$$\mathcal {M} = Hom (\pi_1(X),G)/G.$$
+
+The three descriptions of Hitchin's moduli space:
+\begin{enumerate}
+  \item (Dolbeault) $\mathcal{M}_{Dol}$ the moduli space of Higgs bundles, which consists of pairs $(E,\Phi)$, where $E$ is a rank $n$ degree zero holomorphic vector bundle and $\Phi\in \Gamma(End(E)\otimes \Omega^1)$ a Higgs field.
+  \item (De-Rham) $\mathcal{M}_{DR}$ the moduli space of connections on rank $n$ holomorphic vector bundles, consisting of pairs $(V, \nabla)$ with $\nabla: V\rightarrow V \otimes \Omega^1$ a holomorphic connection.
+  \item (Betti) $\mathcal{M}_{B}$ the conjugacy classes of representation of the fundamental group of $X$. Notice this is the character variety of the compact Riemann surface with $G=GL(n,\mathbb{C})$.
+\end{enumerate}
+
+From Dolbeault to De-Rham: naturally diffeomorphic as real manifolds via the non-abelian Hodge correspondence, but not complex analytically isomorphic.
+
+From De-Rham to Betti: Locally, the connection can be written as $\nabla = d + A$. Since $X$ is compact, homomorphic is the same as algebraic and $V$ and $\nabla$ are holomorphic implies $A\in GL(n,\mathbb{C})$. The flatness of the connection implies the holonomy only depends on the homotopy type, thus the representation of the fundamental group $\pi_1(X)$.
+
+Example: when $n=1$ that is $G = \mathbb{C}^*$, then
+\begin{enumerate}
+  \item $\mathcal{M}_{Dol} \cong T^*Jac(X)$.
+  \item $\mathcal{M}_{DR} \rightarrow Jac(X)$ a twisted cotangent bundle of the Jacobian of $\Sigma$; it is an affine bundle modeled on the cotangent bundle.
+  \item $\mathcal{M}_{B} \cong (\mathbb{C}^*)^{2g}$ is isomorphic to $2g$ copies of $\mathbb{C}^*$.
+\end{enumerate}
+
+Alert: The isomorphism (Riemann-Hilbert correspondence) $\mathcal{M}_{DR} \rightarrow \mathcal{M}_{B}$ involves exponential and not algebraic. And conversely, no algebraic isomorphism $\mathcal{M}_{B}\rightarrow \mathcal{M}_{DR}$ exists.
+
+Another argument: $\mathcal{M}_{B}$ is affine, and it does not have compact subvarieties. Thus so is $\mathcal{M}_{DR}$. However, $\mathcal{M}_{Dol}$ has such (zero section), which make it impossible to have complex analytic isomorphism $\mathcal{M}_{DR} \rightarrow \mathcal{M}_{Dol}$. On the other hand, the abelian Hodge theory and Dolbeault isomorphism gives rise to a non-holomorphic isomorphism $\mathcal{M}_{DR} \rightarrow \mathcal{M}_{Dol}$.
+
+A couple of remarks,
+
+1) Dolbeault space has algebraic Hamiltonian integrable system (presented by Lei, also known as the Hitchin system?), there is a proper map
+$$\mathcal{M}\rightarrow \mathbb{H}$$
+to a vector space of half of the dimension. The generic fibres of the map are abelian varieties. In the abelian case, the space is product of $\mathbb{C}^g\times Jac(X)$, but in general, the fibres vary non-trivially and there are singular fibres.
+
+2) The mapping class group has an natural (symplectic, algebraic) action on the moduli space, through the Betti description.
+
+
+\medskip
+\textbf{Airy's equation}
+
+Consider $X = \mathbb{P}^1 = \mathbb{C}_z \cup \{\infty\} = \{0\}\cup \mathbb{C}_w$. The general Airy's equation: $f^{''} = z^n f$. Write $\nabla = d - A$, the ODE corresponds to a holomorphic connection on $\mathbb{C}_z$, as in
+$$\frac{d}{dz}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}
+  = \begin{pmatrix}
+  0 & 1 \\ z^n & 0
+  \end{pmatrix}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}.$$
+However, this connection is singular at infinity. Let $w =1/z$, then $z\partial_z = - w\partial_w$. The ODE becomes $((z\partial_z)^2 - (z\partial_z) - z^{n+2})f = 0$, which in the new coordinate is $((w\partial_w)^2 + (w\partial_w) - w^{-n-2})f = 0$, that is
+$$\frac{\partial^2f}{\partial w^2} + \frac{2}{w}\frac{\partial f}{\partial w} - \frac{1}{w^{n+4}}f =0.$$
+In terms of connection, this is
+$$\frac{d}{dw}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}
+  = \begin{pmatrix}
+  0 & 1 \\ \frac{1}{w^{n+4}} & \frac{2}{w}
+  \end{pmatrix}\begin{pmatrix}
+      f \\
+      f'
+    \end{pmatrix}.$$
+The connection $A$ can be expanded as
+$$A = \frac{A_{n+4}}{w^{n+4}} + \frac{A_1}{w} + \text{holomorphic terms},$$
+where $A_i \in \mathfrak{gl}(n,\mathbb{C})$.
+
+The irregular type $Q$ of this connection at infinity is
+$$dQ = \frac{A_{n+4}}{w^{n+4}} = \frac{1}{w^{n+4}}\begin{pmatrix} 0 & 0 \\ 1 & 0\end{pmatrix}$$
+
+\medskip
+\textbf{Regular singularity}
+
+A meromorphic connection has regular singularity if its singular pole has order ar most $1$. Deligne showed a version of the correspondence.
+
+Deligne's Riemann-Hilbert correspondence: If $X$ is a Riemann-Surface with punctures and $G =GL(n,\mathbb{C})$, then the character variety corresponds to the space of algebraic connections with regular singularities at the punctures.
+
+\medskip
+\textbf{Stokes Data}
+
+Let $D$ be an effective divisor on $\mathbb{P}^1$. A meromorphic connection $\nabla$ on $D$ is a map $\nabla: V\rightarrow V\otimes K(D)$ satisfying the Leibniz rule. Locally at an irregular singular point, $\nabla = d - A$ and $A = dQ + \Lambda \frac{dz}{z}$, $Q$ is a matrix of meromorphic functions. Choose a framing so that $Q$ is diagonal, that is $Q = \text{diag}(q_1,q_2,\dotsb, q_n)$. Let $q_{ij}(z)$ be the most singular term on $q_i - q_j$.
+
+Some definitions.
+\begin{itemize}
+  \item Let $S^1$ parameterize the rays around $z$. If $d_1,d_2\in S^1$, define $Sect(d_1,d_2)$ be the open sector sweeping from $d_1$ to $d_2$.
+  \item The anti-Stokes directions $\mathbb{A} \subset S^1$ are the directions $d\in S^1$ such that for some $i~\neq~j$,$q_{ij}~\in~\mathbb{R}_{<0}$ along this ray $d$.
+  \item The roots of $d$ are the ordered pairs (ij) supporting $d$:
+  $$Roots(d) := \{(ij)| q_{ij}\in \mathbb{R}_{<0} \text{ along } d\}.$$
+  \item The multiplicity of $d$ is the number of roots supporting $d$.
+  \item the group of Stokes factors associated to $d$ is
+  $$Sto_d(A) := \{K\in G |(K)_{ij} = \delta_{ij}, \text{ unless }(ij) \text{ is a root of } d\}.$$
+  This is a unipotent subgroup of $G = GL(n,\mathbb{C})$.
+\end{itemize}
+
+Remarks: The anti-Stokes directions are those where the roots decays rapidly towards the singular point.
+
+To see the stokes group is unipotent. First, $i\neq j$ implies the diagonals are always $1$. Second, if $(ij)$ is a root, $(ji)$ won't be, which implies an ordering. Third, transitivity, as $q_{ij}, q_{jk}\in \mathbb{R}_{<0}$, then $q_{ik} = q_{ij} + q_{jk}\in \mathbb{R}_{<0}$. By a permutation, the Stokes matrix becomes upper triangular, with diagonals equal to $1$, which is obviously an unipotent subgroup, and the property of which is invariant under permutation conjugation.
+
+Since $q_{ij}(z) = a/z^{k-1}$, there is a $\pi /(k-1)$ rotational symmetry. ($k$ is the order of the pole.) Notice that in the generic situation, the leading terms of $q_i$ do not cancel out. $q_{ij}$ has a $2\pi /(k-1)$ symmetry, and $q_{ji}$ contributes the remaining. Let $\textbf{d}=(d_1,\dotsb,d_l)$ be the set of anti-Stokes directions up to this symmetry, then $n(n-1)/2 = \sum_{i=1}^l Mult(d_i)$.
+
+A key result.
+\begin{enumerate}
+  \item The product of the groups of Stokes factors in a half-period is isomorphic to a subgroup of G as a variety.
+    $$\prod_{d\in \textbf{d}}Sto_d(A) \cong PU_+P^{-1},$$
+    via $(K_1,\dotsb,K_l)\mapsto K_l \cdot \cdot \cdot K_2K_1$, and $P$ is a permutation group arranging the anti-Stokes directions in order.
+  \item The product of all groups of Stokes factors is isomorphic to the variety:
+    $$\prod_{d\in \mathbb{A}}Sto_d(A) \cong (U_+\times U_-)^{k-1}.$$
+\end{enumerate}
+
+Suppose $E_{ij}$ is the matrix with the $(ij)$ entry $1$ and $0$ otherwise. It suffices to show any upper triangular matrix $U$ can be decomposed uniquely into a product of $(I+t_{ij}E_{ij})$, for $1\leq i < j\leq n$. Notice that $E_{ij}E_{kl} = \delta_{jk}E_{il}$. Expanding the product, $t_{12}, t_{23},\dotsb$ the sub-diagonal entries are determined immediately. Followed by the next sub-diagonal and so on. The second fact follows the first one easily.
+
+The second product is the space of Stokes data $Sto(Q)$. For $k=2$, the (local version) irregular Riemann-Hilbert correspondence is
+$$\{\text{Connections of singular type Q}\}/\mathcal {G} \cong \mathfrak{t} \times Sto(Q),$$
+where $\mathcal {G}$ is the group of holomorphic maps from the unit disk to $G$ taking $z=0$ to $1_G$, and $\mathfrak{t}$ is an Cartan subalgebra fixed a priori.
