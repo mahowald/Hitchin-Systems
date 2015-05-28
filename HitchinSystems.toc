@@ -1,38 +1,54 @@
 \select@language {english}
-\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{4}
-\contentsline {chapter}{\tocchapter {Chapter}{2}{Overview and Definitions}}{5}
-\contentsline {chapter}{\tocchapter {Chapter}{3}{Symplectic Quotients in Finite and Infinite Dimensions}}{6}
-\contentsline {chapter}{\tocchapter {Chapter}{4}{Hyperkahler Quotients and Integrable Systems}}{7}
-\contentsline {chapter}{\tocchapter {Chapter}{5}{Stability and the Narasimhan-Seshadri Theorem}}{8}
-\contentsline {chapter}{\tocchapter {Chapter}{6}{Teichmueller Theory}}{9}
-\contentsline {chapter}{\tocchapter {Chapter}{7}{Construction of the Hitchin Moduli Space}}{10}
-\contentsline {section}{\tocsection {}{7.1}{Definitions}}{10}
-\contentsline {section}{\tocsection {}{7.2}{Summary of results}}{10}
-\contentsline {section}{\tocsection {}{7.3}{$\mathcal {M}_{H}$ is a dimension $12\left (g-1\right )$ smooth manifold}}{11}
-\contentsline {subsection}{\tocsubsection {}{7.3.1}{Idea of Proof}}{11}
-\contentsline {subsection}{\tocsubsection {}{7.3.2}{Linearization of $(\star )$}}{11}
-\contentsline {subsection}{\tocsubsection {}{7.3.3}{Elliptic Complexes}}{11}
-\contentsline {subsection}{\tocsubsection {}{7.3.4}{$\mathcal {M}_{H}$ is a smooth manifold}}{12}
-\contentsline {section}{\tocsection {}{7.4}{The tangent space}}{13}
-\contentsline {section}{\tocsection {}{7.5}{$\mathcal {M}_{H}$ has a complete hyperkahler metric}}{13}
-\contentsline {subsection}{\tocsubsection {}{7.5.1}{Idea of Proof}}{13}
-\contentsline {subsection}{\tocsubsection {}{7.5.2}{Hyperkahler structure}}{14}
-\contentsline {section}{\tocsection {}{7.6}{Summary of topological results}}{14}
-\contentsline {chapter}{\tocchapter {Chapter}{8}{Integrable Systems and Spectral Curves}}{15}
-\contentsline {chapter}{\tocchapter {Chapter}{9}{Meromorphic Connections and Stokes Data}}{16}
-\contentsline {chapter}{\tocchapter {Chapter}{10}{The Langlands Program and Relations to Geometric Langlands}}{20}
-\contentsline {chapter}{\tocchapter {Chapter}{11}{Spectral Curves and Irregular Singularities}}{21}
-\contentsline {chapter}{\tocchapter {Chapter}{12}{The Stokes Groupoid}}{22}
-\contentsline {chapter}{\tocchapter {Chapter}{13}{Cluster Varieties}}{23}
-\contentsline {chapter}{\tocchapter {Chapter}{14}{The Hitchin System and Teichmueller Theory II}}{24}
-\contentsline {chapter}{\tocchapter {Chapter}{15}{Geometric Langlands and Mirror Symmetry}}{25}
-\contentsline {chapter}{\tocchapter {Chapter}{16}{Hitchin Systems and Supersymmetric Field Theories}}{26}
-\contentsline {section}{\tocsection {}{16.1}{Introduction and definitions}}{26}
-\contentsline {subsection}{\tocsubsection {}{16.1.1}{Supersymmetry}}{26}
-\contentsline {subsection}{\tocsubsection {}{16.1.2}{BPS States}}{27}
-\contentsline {subsection}{\tocsubsection {}{16.1.3}{Moduli of Vacua}}{27}
-\contentsline {section}{\tocsection {}{16.2}{Compactification and Dimensional Reduction}}{28}
-\contentsline {section}{\tocsection {}{16.3}{5D Super Yang-Mills Theory}}{29}
-\contentsline {subsection}{\tocsubsection {}{}{Compactification on $C$}}{30}
-\contentsline {section}{\tocsection {}{16.4}{Compactification from (2,0) 6D Theory}}{30}
-\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{32}
+\contentsline {chapter}{\tocchapter {Chapter}{1}{Introduction}}{5}
+\contentsline {section}{\tocsection {}{1.1}{Local Case}}{5}
+\contentsline {section}{\tocsection {}{1.2}{Teichm\"uller theory}}{6}
+\contentsline {section}{\tocsection {}{1.3}{Link to Knots}}{6}
+\contentsline {section}{\tocsection {}{1.4}{Mirror Symmetry}}{6}
+\contentsline {chapter}{\tocchapter {Chapter}{2}{Overview and Definitions}}{8}
+\contentsline {chapter}{\tocchapter {Chapter}{3}{Symplectic Quotients in Finite and Infinite Dimensions}}{9}
+\contentsline {chapter}{\tocchapter {Chapter}{4}{Hyperk\"ahler Quotients and Integrable Systems}}{10}
+\contentsline {section}{\tocsection {}{}{Introduction}}{10}
+\contentsline {section}{\tocsection {}{4.1}{Symplectic Reduction and K\"ahler Quotients}}{10}
+\contentsline {subsection}{\tocsubsection {}{4.1.1}{Rapid Review of Symplectic Reduction}}{10}
+\contentsline {subsection}{\tocsubsection {}{4.1.2}{Quotients and K\"ahler Structure}}{11}
+\contentsline {section}{\tocsection {}{4.2}{Hyperk\"ahler Quotients}}{12}
+\contentsline {subsection}{\tocsubsection {}{4.2.1}{Rapid Review of Hyperk\"ahler Manifolds}}{12}
+\contentsline {subsection}{\tocsubsection {}{4.2.2}{Quotients and Hyperk\"ahler Structure}}{13}
+\contentsline {subsection}{\tocsubsection {}{4.2.3}{Main Example}}{13}
+\contentsline {chapter}{\tocchapter {Chapter}{5}{Stability and the Narasimhan-Seshadri Theorem}}{16}
+\contentsline {chapter}{\tocchapter {Chapter}{6}{Teichmueller Theory}}{17}
+\contentsline {chapter}{\tocchapter {Chapter}{7}{Construction of the Hitchin Moduli Space}}{18}
+\contentsline {section}{\tocsection {}{7.1}{Definitions}}{18}
+\contentsline {section}{\tocsection {}{7.2}{Summary of results}}{18}
+\contentsline {section}{\tocsection {}{7.3}{$\mathcal {M}_{H}$ is a dimension $12\left (g-1\right )$ smooth manifold}}{19}
+\contentsline {subsection}{\tocsubsection {}{7.3.1}{Idea of Proof}}{19}
+\contentsline {subsection}{\tocsubsection {}{7.3.2}{Linearization of $(\star )$}}{19}
+\contentsline {subsection}{\tocsubsection {}{7.3.3}{Elliptic Complexes}}{19}
+\contentsline {subsection}{\tocsubsection {}{7.3.4}{$\mathcal {M}_{H}$ is a smooth manifold}}{20}
+\contentsline {section}{\tocsection {}{7.4}{The tangent space}}{21}
+\contentsline {section}{\tocsection {}{7.5}{$\mathcal {M}_{H}$ has a complete hyperkahler metric}}{21}
+\contentsline {subsection}{\tocsubsection {}{7.5.1}{Idea of Proof}}{21}
+\contentsline {subsection}{\tocsubsection {}{7.5.2}{Hyperkahler structure}}{22}
+\contentsline {section}{\tocsection {}{7.6}{Summary of topological results}}{22}
+\contentsline {chapter}{\tocchapter {Chapter}{8}{Integrable Systems and Spectral Curves}}{23}
+\contentsline {chapter}{\tocchapter {Chapter}{9}{Meromorphic Connections and Stokes Data}}{24}
+\contentsline {chapter}{\tocchapter {Chapter}{10}{The Langlands Program and Relations to Geometric Langlands}}{28}
+\contentsline {chapter}{\tocchapter {Chapter}{11}{Spectral Curves and Irregular Singularities}}{29}
+\contentsline {chapter}{\tocchapter {Chapter}{12}{The Stokes Groupoid}}{30}
+\contentsline {chapter}{\tocchapter {Chapter}{13}{Cluster Varieties}}{31}
+\contentsline {chapter}{\tocchapter {Chapter}{14}{The Hitchin System and Teichmueller Theory II}}{32}
+\contentsline {chapter}{\tocchapter {Chapter}{15}{Geometric Langlands and Mirror Symmetry}}{33}
+\contentsline {chapter}{\tocchapter {Chapter}{16}{Hitchin Systems and Supersymmetric Field Theories}}{34}
+\contentsline {section}{\tocsection {}{16.1}{Introduction and definitions}}{34}
+\contentsline {subsection}{\tocsubsection {}{16.1.1}{Supersymmetry}}{34}
+\contentsline {subsection}{\tocsubsection {}{16.1.2}{BPS States}}{35}
+\contentsline {subsection}{\tocsubsection {}{16.1.3}{Moduli of Vacua}}{35}
+\contentsline {section}{\tocsection {}{16.2}{Compactification and Dimensional Reduction}}{36}
+\contentsline {section}{\tocsection {}{16.3}{5D Super Yang-Mills Theory}}{37}
+\contentsline {subsection}{\tocsubsection {}{}{Compactification on $C$}}{38}
+\contentsline {section}{\tocsection {}{16.4}{Compactification from (2,0) 6D Theory}}{38}
+\contentsline {chapter}{\tocchapter {Chapter}{17}{Pyongwon's II}}{40}
+\contentsline {chapter}{\tocchapter {Chapter}{18}{Phil's II}}{41}
+\contentsline {chapter}{\tocchapter {Chapter}{19}{Lei's II}}{42}
+\contentsline {chapter}{\tocchapter {Chapter}{20}{Honghao's II}}{43}
+\contentsline {chapter}{\tocchapter {Chapter}{}{Bibliography}}{44}

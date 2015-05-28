@@ -1,2 +1,132 @@
+%!TEX root = HitchinSystems.tex
 
-\chapter{Hyperkahler Quotients and Integrable Systems}
+\chapter{Hyperk\"ahler Quotients and Integrable Systems}
+
+
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\ad}[0]{\mathrm{ad}\,}
+\newcommand{\Mbar}[0]{\overline{\mathcal{M}}}
+
+
+
+
+
+
+
+
+\section*{Introduction}
+The objects of interest to us are as follows. Let $P\to X$ be a principal $G$-bundle over $X$ where $G$ is a compact Lie group. We may consider pairs $(A,\Phi)$ where $A$ is a unitary connection on $P$ and $\Phi\in \Omega^{1,0}(X;\ad P\otimes \bbC)$. By looking at 4-dimensional Yang Mills theory dimensionally reduced to $X$, we may become interested in such pairs which satisfy the self-duality equations 
+\begin{align}
+ &F_A =- [\Phi,\Phi^*]\\
+ &\bar{\partial}_A\Phi = 0
+\end{align}
+where $F$ is the curvature of $A$ and $\bar{\partial}_A$ is the anti-holomorphic part of the covariant derivative with respect to $A$ (we will probably abbreviate at least the former by writing simply $F$). We will denote the space of pairs satisfying the self-duality equations by $\Mbar$. Finally, we would like to study the quotient of $\Mbar$ by the action of the group of gauge transformations, denoted $\mathscr{G}$. Elements of $\mathscr{G}$ are functions on $M$ with values in the adjoint representation of $P$, i.e. $\psi\in \Omega^0(X;\ad P)$, and the action of $\mathscr{G}$ on a pair $(A,\Phi)$ is given by
+\begin{align*}
+  &A\mapsto \psi d \psi^{-1} + \psi A \psi^{-1} = \psi d_A \psi^{-1}\\
+  &\Phi \mapsto \psi \Phi \psi^{-1} 
+\end{align*}
+where $d_A$ is the covariant derivative with respect to $A$ (showing that gauge transformations preserve self-duality is a nice exercise). We will denote this quotient by $\mathcal{M}$. The goal of this talk is to show that $\mathcal{M}$ can be realized as a Hyperk\"ahler quotient.  
+
+\section{Symplectic Reduction and K\"ahler Quotients}
+\subsection{Rapid Review of Symplectic Reduction}
+Hyperk\"ahler quotients can be thought of as an extension of symplectic reduction, so we will briefly review the main ingredients to the symplectic reduction procedure here. The main idea is: given a manifold with some structure (a symplectic form) and a group action which respects that structure, we would like to quotient by the group action in such a way that the resulting object is a manifold with the same type of structure. This will be the main recurring theme as we proceed. 
+
+Let $(M,\omega)$ be a symplectic manifold, which, to avoid difficulty, we take to be finite dimensional.\footnote{The case we care about will not be finite-dimensional, but we will see that the statements made here will still hold in this case.} Now, let $G$ be a connected Lie group which acts on $M$ by symplectomorphisms. We say this group action is Hamiltonian if ther exists a map $\mu^*: \mathfrak{g}\to C^\infty(M)$ such that:
+\begin{enumerate}
+  \item The map $\mathfrak{g}\to \mathfrak{X}(M)$ which sends $\xi\mapsto X_\xi$ has image contained in the set of Hamiltonian vector fields. Moreover, for any $\xi\in \mathfrak{g}$, $\mu^*(\xi)$ is the Hamiltonian function for $X_\xi$, i.e. 
+\begin{equation*}
+  d(\mu^*(\xi)) = \iota_{X_\xi}\omega.
+\end{equation*}
+  \item $\mu$ is a Lie algebra anti-homomorphism, i.e. 
+\begin{equation*}
+  \mu^*([\xi,\eta]) = - \{\mu^*(\xi),\mu^*(\eta)\}.
+\end{equation*}
+\end{enumerate}
+In this case, we may define the moment map\footnote{$\mu^*$ is sometimes called the comomentum map.} $\mu: M\to\mathfrak{g}^*$ by $\langle \mu(x),\xi\rangle = (\mu^*(\xi))(x)$. Condition (2) above is equivalent to saying that $\mu$ is $G$-equivariant with respect to the coadjoint action on $\mathfrak{g}^*$, which means that the set $\mu^{-1}(0)\subset M$ is invariant under the $G$-action. As long as 0 is a regular value of $\mu$, this will actually be an embedded submanifold of $M$. If the $G$-action is free on $\mu^{-1}(0)$, then the quotient $\mu^{-1}(0)/G$ will also be a manifold which we denote by $M\sslash G$. In this case, we have the following theorem:
+\begin{thm}[Marsden-Weinstein]
+  If $(M\omega)$, $G$, and $\mu$ are as above and $M\sslash G := \mu^{-1}(0)/G$ is a manifold, then $M\sslash G$ is symplectic with symplectic form $\omega'$ uniquely defined by the property that $\pi^*\omega' = i^*\omega$ where $i:\mu^{-1}(0)\to M$ and $\pi: \mu^{-1}(0)\to M\sslash G$ are the inclusion and quotient maps respectively. 
+\end{thm}
+\subsection{Quotients and K\"ahler Structure}
+First, we recall the definition of a K\"ahler manifold. We say a manifold $M$ endowed with a metric $g$, complex structure $\mathbf{J}$, and symplectic form $\omega$ is K\"ahler if these three structures are compatible. This may be defined in a variety of ways. One possibility is to require $\mathbf{J}$ to be covariantly constant with respect to the Levi-Civita connection induced by $g$ and then to define $\omega(X,Y) = g(\mathbf{J}X,Y)$ for vector fields $X$ and $Y$.\footnote{Actually, by choosing any two of the metric, complex structure, and symplectic form and requiring that these are compatible in the appropriate sense, we may construct the third structure in a compatible way.} We can also see that the structure group of a K\"ahler manifold has been reduced to $U(n)$, where $2n$ is the real dimension of the manifold, since the metric, complex structure, and symplectic form reduce the structure group to $\mathrm{O}(2n)$, $\mathrm{GL}(n,\bbC)$, and $\mathrm{Sp}(2n,\mathbb{R})$ respectively. 
+
+Since K\"ahler manifolds are symplectic manifolds, we may ask whether the process of symplectic reduction preserves the K\"ahler structure. To answer this, we first consider how a metric may descend to a quotient manifold. Let $(M,g)$ be a Riemannian manifold and let $G$ be a connected Lie group which acts on $M$ by isometries. We will require that $M/G$ comes with a natural manifold structure, in particular the $G$-action must be free. Then, the space $M$ has the structure of a principal $G$-bundle over $M/G$. At any point $x\in M$, the vertical subspace of the tangent space at $x$, $V_x\subset T_xM$, is isomorphic to $\mathfrak{g}$. Moreover, since the $G$-action on $M$ is free, there are non-vanishing vector fields which generate $V_x$ at each point. Then, the operation of orthogonal projection onto $V_x$ at each point defines a one form, $\theta$, with values in $\mathfrak{g}$ which transforms under the adjoint representation of $G$. $\theta$ defines a connection on $M$, i.e. a distribution of horizontal subspaces $H_x\subset T_xM$ complementary to $V_x$. Then, for any vector fields $X,Y$ on $M/G$, we can use the connection to lift these to horizontal vector fields $\tilde{X},\tilde{Y}$ on $M$. We see that the metric $h(X,Y) = g(\tilde{X},\tilde{Y})$ is well defined using this choice of (orthogonal) horizontal lift since $g$ is invariant under the $G$-action. 
+
+Now, we can answer our question about whether symplectic reduction preserves K\"ahler structure. 
+\begin{prop}
+  Let $(M,g,\mathbf{J},\omega)$ be a K\"ahler mainfold and let $G$ be a connected Lie group with a Hamiltonian action on $(M,\omega)$ which preserves the metric (and hence complex structure). Also, we require that $M\sslash G$ has a natural manifold structure. Then the naturally induced metric $g'$ on $M\sslash G$ gives $M\sslash G$ the structure of a K\"ahler manifold. 
+\end{prop}
+\begin{proof}[Sketch of proof]
+  Let $N = \mu^{-1}(0)$ so that $N/G = m\sslash G$. Then $TN$ is a sub-bundle of $TM$ and we can further restrict to the horizontal sub-bundle $H\subset TN$ defined by the connection on $N\to N/G$ in the manner discussed above. The Levi-Civita connection with respect to $g'$ on $T(N/G)$ will pull back to a $G$-invariant connection on $H\to N$. We will use the fact that this connection on $H$ is given by orthogonal projection of the Levi-Civita connection of $g\big|_N$ on $TM\big|_N$ to $H$ (for an explanation, see \cite{HKLR}). Now, let $x\in N$. The complement of $T_xN\subset T_xM$ is spanned by the vectors $(\mathrm{grad}\,\mu^{\xi_i})_x$ for $\xi_i$ a basis of $\mathfrak{g}$ (here we have used the notation $\mu^{\xi_i} := \mu^*(\xi_i)$) and the complement of $H$ in $TN$ is spanned by the vertical vectors $k_i$ which are associated to the basis $\xi_i$ of $\mathfrak{g}$. By definition, 
+\begin{equation*}
+  g(\mathrm{grad}\,\mu^{\xi},Y) = d\mu^\xi(Y) = \omega(X_\xi,Y) = g(\mathbf{J}X_\xi,Y)
+\end{equation*}
+for any vector field $Y$ on $M$, and so $\mathrm{grad}\,\mu^\xi = \mathbf{J}X_\xi$. This shows that the vector space spanned by $k_i$ and $(\mathrm{grad}\,\mu^{\xi_i})_x$ is a complex vector space. Moreover, since the basis $\{k_1,...,k_{\dim G}\}$ can be extended to a global frame for the vertical sub-bundle $V\subset TN$, we see that the sub-bundle complementary to $H$ over $N$ is a complex sub-bundle, hence $H$ is as well. This means that $\mathbf{J}\big|_N$ commutes with orthogonal projection onto $H$, and since $\mathbf{J}$ is compatible with $g$, this implies that $\mathbf{J}\big|_N$ is covariantly constant with respect to the orthogonal projection of the Levi-Civita connection of $g\big|_N$ on $TM\big|_N$ to $H$. Since this is just the pull back of the Levi-Civita connection of $g'$ on $T(N/G)$ to $N$ and $\mathbf{J}$ was assumed to be $G$-invariant, we see that $\mathbf{J}$ descends to a complex structure on $N/G$ which is compatible with the induced metric $g'$. 
+\end{proof}
+\section{Hyperk\"ahler Quotients}
+\subsection{Rapid Review of Hyperk\"ahler Manifolds}
+Hyperk\"ahler structure can be thought of as a ``quaternionic'' extension of K\"ahler structure. In particular, we say that a Riemannian manifold $(M,g)$ is Hyperk\"ahler if it is equipped with three complex structures $\mathbf{I}$, $\mathbf{J}$, and $\mathbf{K}$, each of which are covariantly constant, and which satisfy quaternionic algebraic relations (i.e. $\mathbf{I}^2 = -1$, $\mathbf{J}^2 = -1$, $\mathbf{K}^2 = -1$, $\mathbf{I}\mathbf{J} = \mathbf{K}$, etc.). As a result, the tangent space at each point becomes a quaternionic vector space and the structure group is reduced to $\mathrm{O}(4n)\cap \mathrm{GL}(n,\mathbb{H}) = \mathrm{Sp}(n)$. As in the K\"ahler case, each of these complex structures defines a symplectic form compatible with the metric: $\omega_1(X,Y) = g(\mathbf{I}X,Y)$, $\omega_2(X,Y) = g(\mathbf{J}X,Y)$, and $\omega_3(X,Y) = g(\mathbf{K}X,Y)$. This means that each triple $(g, \mathbf{I}, \omega_1)$ gives $M$ the structure of a K\"ahler manifold. 
+\subsection{Quotients and Hyperk\"ahler Structure}
+If $(M,g,\vec{\mathbf{I}},\vec{\omega})$ is a Hyperk\"ahler manifold and $G$ is a connected Lie group which acts on $M$ in a Hamiltonian manner with respect to each symplectic structure and preserves the metric, then we may consider the symplectic reduction of $M$ with respect to each of the three moment maps $\mu_1$, $\mu_2$, and $\mu_3$. From the section above, we see that each of these quotients will inherit a K\"ahler structure from $M$. Now, we would like to define a new type of quotient which inherits the Hyperk\"ahler structure from $M$. 
+
+The key will be to consider one moment map
+\begin{equation*}
+  \mu: M\to \mathfrak{g}^*\otimes \mathbb{R}^3
+\end{equation*}
+defined by $\mu(x) = (\mu_1(x),\mu_2(x),\mu_3(x))$. Then, if 0 is a regular value of $\mu$, we see that $\mu^{-1}(0)$ is an embedded submanifold in $M$ which is invariant under the $G$-action. Furthermore, if the $G$-action is free on $\mu^{-1}(0)$, then the quotient $\mu^{-1}(0)/G$ will have a natural manifold structure. 
+\begin{prop}
+  If $(M,g,\vec{\mathbf{I}},\vec{\omega})$ and $G$ are as above, then the quotient $\mu^{-1}(0)/G$ with the inherited metric, complex structures, and symplectic forms is a Hyperk\"ahler manifold. 
+\end{prop}
+\begin{proof}
+  We begin by defining the complex moment map
+\begin{equation*}
+  \mu_+ = \mu_2 + i\mu_3 : M \to \mathfrak{g}^*\otimes \bbC.
+\end{equation*}
+Then we see that $d\mu_+^\xi(Y) = \omega_2(X_\xi,Y) + i\omega_3(X_\xi,Y) = g(\mathbf{J}X_\xi,Y) + ig(\mathbf{K}X_\xi,Y)$ while $d\mu_+^\xi(\mathbf{I}Y) = \omega_2(\mathbf{J}X_\xi,\mathbf{I}Y) + i\omega_3(\mathbf{K}X_\xi,\mathbf{I}Y) = -g(\mathbf{K}X_\xi,Y) + ig(\mathbf{J}X_\xi,Y)$. Thus, $id\mu_+^\xi(Y) = d\mu_+^\xi(\mathbf{I}Y)$ for all vector fields $Y$ on $M$. Working in local holomorphic coordinates at any point in $M$, we may consider the vector fields $\frac{\partial}{\partial \bar{z}^i}$, which satisfy
+\begin{equation*}
+  \mathbf{I}\frac{\partial}{\partial \bar{z}^i} = -i \frac{\partial}{\partial \bar{z}^i}.
+\end{equation*}
+Then, plugging this into the result above gives
+\begin{equation*}
+  i\frac{\partial \mu^\xi_+}{\partial \bar{z}^i} = id\mu^\xi_+\left(\frac{\partial}{\partial \bar{z}^i}\right)=d\mu^\xi_+\left( \mathbf{I}\frac{\partial}{\partial \bar{z}^i}\right) = -i \frac{\partial \mu^\xi_+}{\partial \bar{z}^i}
+\end{equation*}
+so $\mu^\xi_+$ is a holomorphic function. Thus, as long as 0 is a regular value of $\mu_+$, we see that $\mu_+^{-1}(0)$ is an embedded complex submanifold of $M$ with respect to the complex structure $\mathbf{I}$. This means that $\mu_+^{-1}(0)$ is K\"ahler with its induced metric. Now, consider the $G$-action restricted to $\mu_+^{-1}(0)$. This still preserves the metric and the complex structure $\mathbf{I}$, and we can restrict the moment map $\mu_1$ to this submanifold, giving us a moment map for the $G$-action with respect to the restricted symplectic form $\omega_1$. Then, from the previous proposition, we see that $\mu_1^{-1}(0)\cap\mu_+^{-1}(0)/G$ is a K\"ahler manifold with the induced metric and complex structure. It follows that $\mu^{-1}(0)/G$ is K\"ahler with respect to $\mathbf{I}$ since $\mu_+^{-1}(0) = \mu_2^{-1}(0)\cap\mu_3^{-1}(0)$. Repeating this argument for $\mathbf{J}$ and $\mathbf{K}$ shows that each of these define a K\"ahler structure on $\mu^{-1}(0)/G$. 
+\end{proof}
+\subsection{Main Example}
+Now we may relate these new definitions to the subject of interest to us: the self-duality equations and the moduli space $\mathcal{M}$. We begin by looking at the manifold consisting of pairs $(A,\Phi)$ as in the introduction (we will use Hiychin's notation for this manifold, denoting it by $\mathscr{A}\times \Omega$). The tangent space to this manifold at a point $(A,\Phi)$ is given by $\Omega^{0,1}(X;\ad P\otimes \bbC)\oplus \Omega^{1,0}(X;\ad P\otimes \bbC)$. We can define a symplectic structure on $\mathscr{A}\times \Omega$ as follows:
+\begin{equation*}
+  \omega((\Psi_1,\Phi_1),(\Psi_2 ,\Phi_2)) = \int_X \mathrm{Tr}(\Phi_2\Psi_1 - \Phi_1\Psi_2)
+\end{equation*}
+where $(\Psi_i,\Phi_i)\in \Omega^{0,1}(X;\ad P\otimes \bbC)\oplus \Omega^{1,0}(X;\ad P\otimes \bbC)$. $\omega$ is clearly non-degenerate. To see it is closed, we note that $\omega$ has constant coefficients in $(\Psi_i,\Phi_i)$ and that $\mathscr{A}\times \Omega$ is an affine space. 
+
+Now, define the vector field $X = (\Psi_1,\Phi_1)$ on $\mathscr{A}\times \Omega$ by $\Psi_1 = \bar{\partial}_A\psi$ and $\Phi_1 = [\Phi,\psi]$ where $\psi\in \Omega^0(X;\ad P)$ is an infinitesimal gauge transformation. Moreover, since $\mathscr{A}\times \Omega$ is an affine space, we may consider the vector field $(\dot{A}^{0,1},\dot{\Phi})$ where $(A,\Phi)\in \mathscr{A}\times\Omega$. Then, we can compute
+\begin{align*}
+  (\iota_X\omega)(\dot{A}^{0,1},\dot{\Phi}) &= \int_X \mathrm{Tr}(-[\Phi,\psi]\dot{A}^{0,1} + \dot{\Phi}\bar{\partial}_A\psi) \\
+&= \int_X \mathrm{Tr}(\psi[\dot{A}^{0,1},\Phi] + \bar{\partial}_A\dot{\Phi}\psi) \\
+&= df(\dot{A}^{0,1},\dot{\Phi})
+\end{align*}  
+where $f = \int_X\mathrm{Tr}(\bar{\partial}_A\Phi\psi)$. Thus, for the complex symplectic form $\omega$, we have shown that the function $f$ is Hamiltonian with respect to the vector field $X$. Moreover, one can check that the assignment $\psi \mapsto f$ is equivariant with respect to the action of the group $\mathscr{G}$, so we see that $f$ defines a moment map for this action. We define $\omega_2$ and $\omega_3$ to be the real and imaginary parts of the symplectic form $\omega$, and $\mu_2$, $\mu_3$ to be the real and imaginary parts of the moment map $\mu$ defined by $f$. Furthermore, $\mathscr{A}\times\Omega$ comes with a natural K\"ahler metric defined by
+\begin{equation*}
+  g((\Psi,\Phi),(\Psi,\Phi)) = 2i\int_X\mathrm{Tr}(\Psi^*\Psi + \Phi\Phi^*)
+\end{equation*}
+where $(\Psi,\Phi)\in \Omega^{0,1}(X;\ad P\otimes \bbC)\oplus \Omega^{1,0}(X;\ad P\otimes \bbC)$. This defines a third symplectic form $\omega_1$ on $\mathscr{A}\times\Omega$. It turns out that all three of these symplectic forms are compatible with the metric $g$ and that together with $g$ they define a Hyperk\"ahler structure on $\mathscr{A}\times \Omega$ (see section 6 of \cite{H1}). Moreover, if we recall that the moment map associated to $\omega_1$ was defined by $\mu_1(A,\Phi) = F_A + [\Phi,\Phi^*]$, we see that requiring $\mu_1(A,\Phi) = 0$ is equivalent to the self-duality equation (1). Furthermore, we can see that requiring $\mu(A,\Phi) = \mu_2(A,\Phi) + i\mu_3(A,\Phi) = 0$ is equivalent to requiring $\bar{\partial}_A\Phi = 0$, which is exactly self-duality equation (2). Thus, the Hyperk\"ahler quotient $\mu^{-1}(0)/\mathscr{G}$ is exactly the moduli space of solutions $\mathcal{M}$. 
+
+With this result in hand, we may hope that the result from the previous section tells us that $\mathcal{M}$ is a Hyperk\"ahler manifold. However, in this infinite-dimensional setting the result is a purely formal statement. Instead, it is possible to directly show that $\mathcal{M}$ has a Hyperk\"ahler structure. 
+\begin{prop}
+  Let $\mathscr{A}\times\Omega$ and $\mathscr{G}$ be as above. Then the Hyperk\"ahler quotient $\mu^{-1}(0)/\mathscr{G}$ inherits the structure of a Hyperk\"ahler manifold (assuming it has a manifold structure to begin with). 
+\end{prop}
+In the specific case \cite{H1} deals with, this result appears as Theorem 6.7. We will only go through the main points of the proof here. 
+\begin{proof}[Rough sketch of proof]
+  The result of Marsden and Weinstein tells us that each of the inherited symplectic structures on $\mu^{-1}(0)/\mathscr{G}$ is, in fact, closed and non-degenerate. Moreover, it is possible to show that each complex structure on $\mathscr{A}\times\Omega$ induces an almost complex structure on $\mu^{-1}(0)/\mathscr{G}$. Then, \cite{H1} shows that the integrability of the induced complex structures is implied as long as the corresponding symplectic forms are closed. Since we know this is the case, we obtain three complex structures on $\mu^{-1}(0)/\mathscr{G}$ each compatible with $g$. It is left to check that these complex structures satisfy the quaternionic algebraic relations. However, this must only be checked on each tangent space, and this local property follows directly from the construction of these complex structures from the complex structures on 
+$\mathscr{A}\times\Omega$. 
+\end{proof}
+
+
+
+
+
+

@@ -1,3 +1,6 @@
+%!TEX root = HitchinSystems.tex
+
+
 \chapter{Introduction}
 
 This course studies the Hitchin system from different perspectives and in various settings.
@@ -13,14 +16,15 @@ interpreted formally as hyperkahler moment map equations for the compact gauge G
 on the infinite-dimensional space of connections.  Since we quotient solutions by gauge
 transformations, this means we have an interpretation of the Hithchin moduli space as a hyperkahler
 quotient.  Thus it should inherit a hyperkaher structure.  Of the three independent complex structures,
-the one most amenable to algebraic geometry is the one inherited from the complex
+the one most amenable to algebraic geometry is the ``Dolbeault'' one inherited from the complex
 structue on the Riemann surface, $C$.  In that setting, the Hitchin moduli space has an
 interpretation as stable Higgs pairs, i.e. pairs $(V,\varphi)$, where $V$ is a rank-$n$ holomorphic
 vector bundle over $C$, and $\varphi\in \Gamma(End(V)\otimes K_C)$ is a holomorphic $n\times n$
 matrix-valued one-form.  Stability requires that all $\varphi$-invariant sub-bundles have lesser slope
 than $V$.  Finally, solutions are taken modulo holomorphic isomorphism of vector bundles.
 
-Another structure which emerges is that of an algebraically completely integrable system.
+Another structure which emerges in this complex structure
+is that of an algebraically completely integrable system.
 Recall first that a complete integrable system on a symplectic manifold (``phase space'') is a
 maximal set of Poisson-commuting proper functions (``Hamiltonians").  Specifying the values
 of these conserved quantities gives a common level set which is a Lagrangian torus.
@@ -28,4 +32,84 @@ This gives another definition:  a fibration by Lagrangian tori to a base manifol
 Hamiltonians take their values.  The fiber map for the Hitchin space is defined by all the
 invariant polynomials $Tr\varphi^k$.
 
-Local study....
+The other complex structures are called ``de Rham,'' in which the moduli space is of flat
+$GL_n(\mathbb C)$ connections modulo complex gauge transformations, and the ``Betti'' complex
+structure in which the moduli space is irreducible representations of $\pi_1(X)$ modulo conjugation.
+A variety of theorems relate these.  Betti and de Rham are equated by the Riemann-Hilbert
+correspondence, in which one assigns to a flat connection the monodromy data around loops in the space.
+
+\section{Local Case}
+
+Consider that a holomorphic vector bundle has a local trivialization by a holomorphic frame,
+with respect to which the Higgs field looks like 
+
+\section{Teichm\"uller theory}
+
+\section{Link to Knots}
+
+A hidden agenda for this seminar was to begin to explore the spectral curve from the perspective
+of symplectic geometry.  Given a Riemann surface with complex structure $J$ and K\"ahler metric $h$,
+it cotangent bundle $T^*C$ has a tautological holomorphic one-form $\theta$ and
+holomorphic symplectic structure $\Omega = d\theta$.  
+Treating $C$ as a real manifold, $T^*C$ has a canonical symplectic form $Re(\Omega)$
+for which the spectral curve is Lagrangian, and we would like to consider it as an
+object of the Fukaya category of $T^*C.$
+
+
+
+
+%
+%Now $h$ induces a K\"ahler metric
+%$\omega$ on $T^*C,$ and the triple $(\omega,Re\Omega,Im\Omega)$ define the
+%hyper-K\"ahler structure.  A holomorphic curve $\Sigma \subset T^*C$ is calibrated
+%by $\omega$ but is Lagrangian with respect to $Re\Omega.$  In this symplectic structure,
+%we can consider $\Sigma$ as an object in the Fukaya category of $T^*C$.
+%In fact is special Lagrangian
+%with respect to the Calabi-Yau form $\omega - i Im \Omega.$
+
+\section{Mirror Symmetry}
+
+Recall that mirror symmetry is a kind of equivalence between a manifold $X$ and its mirror $Y$.
+It goes deep, but in its simplest formulation, the Hodge diamonds of $X$ and $Y$ are related
+by a mirror reflection.
+The basic philosophy behind mirror symmetry is that mirror manifolds are dual torus fibrations,
+according to the following reasoning.  A B-type D-brane (or B-brane) on a complex manifold is a coherent sheaf,
+and we will only consider the case of the structure sheaf of
+single point.  An A-type D-brane (or B-brane) in a symplectic
+manifold is a special Lagrangian submanifold with a flat connection $\nabla$
+--- and we shall focus on the line bundle case.
+
+On a complex manifold $X$, the space of B-branes connected to a point brane is $X$ itself.
+If there were a mirror manifold $Y$, the corresponding space of A-branes should again be $X,$
+since the moduli spaces of mirror branes should correspond.  So
+we should be able to find the mirror $X$ to $Y$ by identifying A-branes that correspond to point B-branes
+and looking at their moduli.  By reversing the reasoning,
+we also learn that the manifolds $X$ and $Y$ each are expressible
+both as a space of A-branes.
+
+If we fix an A-brane $(T,\nabla)$, the space of A-branes deformation equivalent
+to (``connected to'') the brane $(T,\nabla)$ therefore has a forget map to the space
+of special Lagrangians connected to $T$.  The fibers are tori $(S^1)^{b_1(T)}$ which encode
+the monodromies, and it so happens
+that by  linearizing
+the special Lagrangian equations you can see that $b_1(T)$ is also the dimension of the space
+of special Lagrangians at $T.$  So the D-brane moduli space is an integrable system, a torus
+fibration over special Lagrangian moduli space (Lagrangianicity must be argued separately).
+Now $Y$, like $X,$ should itself be some an A-brane (on $X$) moduli space, so has a torus
+fibration structure, a map $Y\to B$.  What if we took $T$ to be a torus fiber?
+Then the dimensions are right, since we want $b_1(T)$ to be equal to the complex dimension
+of $X$ and $Y,$ equivalently the real dimension of $T$.  A fiber also has the property that it is disjoing from its deformations -- just like
+its dual point B-branes.  If this is the case (and there are other arguments supporting this which
+we ignore), then the D-brane moduli space of a torus fiber $T$ fibers over the same base $B$ (its geometric
+deformations), with the fiber over $T_b = \pi^{-1}(b)$ being the flat line bundles on $T_b,$ i.e. the
+dual torus.  Therefore
+
+$$\emph{Mirror pairs are dual Lagrangian torus fibrations}$$
+
+The geometric Langlands program is a connection between Hitchin moduli spaces of
+Langlands dual groups $G$ and $G^\vee.$
+Each gives rise to an integrable system via its spectral curve construction.
+Hausel-Thaddeus found these spaces to be dual torus fibrations
+and computed the (stringy) Hodge numbers of both sides, revealing them to be mirror.
+
+
