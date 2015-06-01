@@ -11,6 +11,138 @@
 \usepackage[all]{xy}
 \usepackage{mathrsfs}
 \usepackage{stmaryrd}
+\usepackage{enumerate,tikz}
+
+
+
+\usepackage{anysize}
+\marginsize{1in}{1in}{1in}{1in}
+
+\usepackage{amsmath,amsthm,amssymb,amsbsy,amstext,amsopn,amsfonts,bbm,psfrag,color,float}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage[all]{xy}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+
+\usepackage[bookmarks=true, bookmarksopen=true,%
+bookmarksdepth=3,bookmarksopenlevel=2,%
+colorlinks=true,%
+linkcolor=blue,%
+citecolor=blue,%
+filecolor=blue,%
+menucolor=blue,%
+urlcolor=blue]{hyperref}
+
+\newenvironment{HW}{\color{violet}{\bf HW:} \footnotesize}{}
+\newenvironment{VS}{\color{blue}{\bf VS:} \footnotesize}{}
+\newenvironment{EZ}{\color{red}{\bf EZ:} \footnotesize}{}
+\newenvironment{DT}{\color{magenta}{\bf DT:}\footnotesize}{}
+
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{corollary}[lemma]{Corollary}
+\newtheorem{theorem}[lemma]{Theorem}
+
+\theoremstyle{definition}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{question}[lemma]{Question}
+
+% font shorts
+
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\U}{\mathbb{U}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+%\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+%\newcommand{\bZ}{\mathbf{Z}}
+
+\newcommand{\coeffs}{\mathbbm{k}}
+\newcommand{\e}{\epsilon}
+\newcommand{\red}[1]{{\color{red} #1}}
+
+
 
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
@@ -31,6 +163,8 @@
   \newtheorem*{cor*}{\protect\corollaryname}
   \theoremstyle{plain}
   \newtheorem{prop}{\protect\theoremname}
+\newtheorem{conj}[thm]{Conjecture}
+
 
 \makeatother
 
@@ -95,6 +229,10 @@
 
 %% Bibliography
 \begin{thebibliography}{AB}
+\bibitem[A]{A}M.~F.~Atiyah, ``Complex analytic connections in fibre
+bundles.'' Transactions of the American Mathematical Society (1957):
+181-207.
+
 \bibitem[AB]{AB}M.~F.~Atiyah and R.~Bott, The Yang-Mills equations
 over Riemann surfaces. Philos.~Trans.~Roy.~Soc. London A 308 (1982)
 523--615.
@@ -113,8 +251,17 @@ theory on curves - 2004, Compos.~Math.~140 (2004) 179--204.
 ``Spectral curves and the generalized theta divisor,'' J.~reine
 angew.~Math. 398 (1989) 169--179 URL: http://math1.unice.fr/\textasciitilde{}beauvill/pubs/bnr.pdf
 
+\bibitem[Br]{Br}J.-L.~Brylinski, ``Loop spaces, characteristic classes
+  and geometric quantization.'' Vol. 107. Springer Science \& Business Media, 2007.
+
 \bibitem[D]{D}S.~K.~Donaldson, ``A new proof of a theorem of Narasimhan
 and Seshadri,'' J.~Differential Geometry, \textbf{18} (1983) 269--277.
+
+\bibitem[DG]{DG}R.~Y.~Donagi, and D.~Gaitsgory, ``The gerbe of Higgs
+  bundles.'' Transformation groups 7.2 (2002): 109-153.
+
+\bibitem[DP]{DP}R.~Donagi, and T.~Pantev, ``Langlands duality for
+  Hitchin systems.'' arXiv preprint math/0604617 (2006).
 
 \bibitem[DM]{DM}R.~Donagi and E.~Markman, ``Spectral covers, algebraically
 completely integrable Hamiltonian systems, and moduli of bundles.''
@@ -127,6 +274,10 @@ Sci. No. 103 (2006), 1\textendash{}211.
 \bibitem[GMN]{GMN} D.~Giaotto, G.~Moore, and A.~Neitzke, Wall-crossing,
 Hitchin systems, and the WKB approximation. arXiv:0907.3987
 
+\bibitem[HT]{HT}T.~Hausel and M.~Thaddeus. Mirror symmetry, Langlands
+duality, and the Hitchin system. Invent. Math., 153 (1):197\textendash{}229,
+2003.
+
 \bibitem[H1]{H1}N.~Hitchin, ``The self-duality equations on a Riemann
 surface,'' Proc. Long. Math. Soc. 55 (1987) 59--126.
 
@@ -136,9 +287,18 @@ Duke Math J. 54 (1987) 91--114.
 \bibitem[H3]{H3}N.~Hitchin, ``Lie Groups and Teichmueller Space,''
 Topology 31 (1992) 449--473.
 
-\bibitem[HT]{HT}T.~Hausel and M.~Thaddeus. Mirror symmetry, Langlands
-duality, and the Hitchin system. Invent. Math., 153 (1):197\textendash{}229,
-2003.
+\bibitem[H4]{H4}N.~Hitchin, ``Moduli space of special Lagrangian
+  submanifolds,'' arXiv preprint dg-ga/9711002 (1997).
+
+\bibitem[H5]{H5}N.~Hitchin, ``Lectures on special Lagrangian
+  submanifolds.'' AMS IP Studies in Advanced Mathematics 23 (2001):
+  151-182.
+
+\bibitem[HKLR]{HKLR}
+  N.~J.~Hitchin, A.~Karlhede, U.~Lindstr\"om, M. Ro\v{c}ek,
+  ``Hyperk\"ahler Metrics and Supersymmetry,''
+  Commun. Math. Phys. 108 (1987) 535--589.
+arXiv:0710.0631
 
 \bibitem[KW]{KW}A.~Kapustin and E.~Witten, ``Electric-Magnetic
 Duality and the Geometric Langlands Program,'' CNTP 1 (2007()1--236.
@@ -151,12 +311,20 @@ https://www.ma.utexas.edu/users/neitzke/expos/hitchin-systems.pdf
 and unitary vector bundles on a compact Riemann surface,' Ann.~of
 Math.~\textbf{82} (1965) 540--567.
 
+\bibitem[Ne]{Ne}P.~E.~Newstead, ``Introduction to moduli problems and
+orbit spaces,'' Vol. 51 of Tata Institute of Fundamental Research
+Lectures on Mathematics and Physics. Tata Institute of Fundamental
+Research, Bombay (1978).
+
+\bibitem[P]{P}A.~Polishchuk, ``Abelian varieties, theta functions and
+  the Fourier transform.'' Vol. 153. Cambridge University Press,
+  2003.
+
+\bibitem[SYZ]{SYZ}A.~Strominger, S.~-T.~Yau, and E.~Zaslow. `` Mirror
+  symmetry is T-duality.'' Nuclear Physics B 479.1 (1996): 243-259.
+
 \bibitem[W]{W}E.~Witten, ``Gauge Theory and Wild Ramification,''
 
-\bibitem[HKLR]{HKLR}
-  N.~J.~Hitchin, A.~Karlhede, U.~Lindstr\"om, M. Ro\v{c}ek,
-  ``Hyperk\"ahler Metrics and Supersymmetry,''
-  Commun. Math. Phys. 108 (1987) 535--589.
-arXiv:0710.0631\end{thebibliography}
+\end{thebibliography}
 
 \end{document}

@@ -1,2 +1,136 @@
+%!TEX root = HitchinSystems.tex
 
-\chapter{The Langlands Program and Relations to Geometric Langlands}
+\newcommand{\aA}{\mathbb{A}}
+\newcommand{\cC}{\mathbb{C}}
+\newcommand{\fF}{\mathbb{F}}
+\newcommand{\qQ}{\mathbb{Q}}
+\newcommand{\rR}{\mathbb{R}}
+\newcommand{\zZ}{\mathbb{Z}}
+\newcommand{\mr}{\mathrm}
+
+
+\chapter{Introduction to the Langlands Program}
+
+\section{Why do we care?}
+
+This class is about the Hitchin system and the goal is to understand what it is about and see how omnipresent it is throughout mathematics. As of now, I think we have all seen what it is, but not enough for its universal appearance in mathematics yet.\\
+
+I want to introduce one of the main threads for that purpose today, which goes under the name of the Langlands program. This might sound quite far from what we have been doing (since it is indeed actually quite far in any reasonable metric), so I should justify its relevance at least by a few words before I even start. Namely, I want to list some of the possible topics for our class which one way or another build upon the contents of my talk, if very indirect:
+\begin{itemize}
+\item (Fundamental lemma) Ngo Bao Chau got his fields medal in 2010, proving what is called the fundamental lemma in 2008. It was one of the most crucial open problems in the Langlands program. The surprising part is that although the statement is purely in terms of representation theory or harmonic analysis, the single most important ingredient for its proof is (algebraic) geometry of the Hitchin fibration. It will be the topic of my second talk.
+\item (Geometric Langlands) The geometric Langlands program arises from trying to make sense of the Langlands program over the complex number field $\cC$. In fact, the original motivation of the geometric Langlands program is to work in this much easier setting where you have nicer structure and hence can prove stronger results in a cleaner way, and then hope to transport the insight there to the original program. Ngo's proof of the fundamental lemma is so far the strongest example in this direction, because the relevant geometry of the Hitchin system was discovered through the investigation of the geometric program.
+\item (Kapustin-Witten) There is 4-dimensional field theory where one can find geometric Langlands in terms of physical duality, called S-duality. After compactification along a compact Riemann surface, one can see the relationship between the theories with the two target Hitchin moduli spaces in different complex structure as a version of T-duality. Then homological mirror symmetry conjecture together with some technical input would realize a version of the geometric Langlands correspondence.
+\end{itemize}
+
+The aim of the talk is to give gentle introduction to the Langlands program. Since it is a huge subject, I will be rather brief in many places. I will try my best to make the big picture understandable. Of course, feel free to ask questions on details, although I might refuse to answer all of them during this hour. On the other hand, if you can believe that the Langlands program is an interesting and important thing to consider at the end of the talk, then it will be more or less enough to follow my second talk.
+
+\section{Overview}
+
+Let me start with arguably the most famous problem in mathematics of all time, also known as Fermat's last theorem. 
+
+\begin{conj}[Fermat's last theorem]
+The equation $x^n+y^n=z^n$ has no nonzero integral solutions if $n>2$.
+\end{conj}
+
+This conjecture, formulated by Pierre de Fermat in 1637, is finally proved by Andrew Wiles with a technically crucial help of Richard Taylor in 1994. The way to prove this was to prove even stronger result, known as the Taniyama-Shimura-Weil conjecture. Yutaka Taniyama asked a certain question along the line in 1955 and Goro Shimura discussed the question in the following years. Later Andre Weil gave the first serious evidence for the conjecture in 1967: before that, it wasn't even considered to be something one can hope for by many people in the field, including Jean-Pierre Serre. Henceforth, we call it the way it is.
+
+\begin{conj}[Taniyama-Shimura-Weil conjecture]
+Every elliptic curve defined over $\qQ$ is modular.
+\end{conj}
+
+In fact, Wiles proved this result for the class of semistable elliptic curves, which was enough for deriving the Fermat's last theorem. The full conjecture, which follows from the modularity lifting theorem, was proved by Christophe Breuil, Brian Conrad, Fred Diamond, and Richard Taylor in 2001. 
+
+\begin{rem*}[Inter-universal Teichm\"uller theory]
+In 2012, Shinichi Mochizuki finished his first draft on his theory called inter-universal Teichm\"uller theory, which in particular claims to imply the abc conjecture. Since the abc conjecture implies Fermat's last theorem and many many others, this will be an amazing achievement if it turns out to be true. However, as of now, there is no general consensus to whether it is correct, although no one found a crucial error yet. Of course, we are not going to pursue this direction!
+\end{rem*}
+
+In fact, the Taniyama-Shimura-Weil conjecture itself is a special case of the Langlands correspondence. Since it is more relevant to the main thread, let us explain how it works.\\
+
+One rough idea of the Langlands correspondence is that one can understand some important information of number theory or algebraic geometry in terms of representation theory or harmonic analysis. As a first example, for number theoretic side, let us consider $n$-dimensional representations of the absolute Galois group $G_\qQ:= \mr{Gal}(\overline{\qQ}/\qQ)$. The claim is that the data is encoded in terms of irreducible automorphic representations of $GL_n(\aA_\qQ)$.\\
+
+We need to explain what we mean by the latter first. We define the ring of adeles of $\qQ$ by $\aA_\qQ := \left(\displaystyle\prod_p\;\!\! ' \qQ_p\right) \times \rR$, where $\qQ_p$ is the field of $p$-adic numbers and by the restricted product $\prod' \qQ_p$ we mean \[\{(x_p) \in \prod \qQ_p  \mid x_p\in\zZ_p \text{ all but finitely many primes }p \}.\] Moreover, we have a natural diagonal embedding $\qQ \hookrightarrow \aA_\qQ$ which is discrete. From this we can consider the quotient $GL_n(\qQ) \setminus GL_n(\aA_\qQ)$ on which $GL_n(\aA_\qQ)$ still acts from the right.\\
+
+Then we consider the right regular representation $L^2(GL_n(\qQ) \setminus GL_n(\aA_\qQ) )$ with respect to the natural measure as a representation of $GL_n(\aA_\qQ)$. One can decompose it into irreducible representations, which have continuous parts as well as discrete parts, and those representations are called \textit{automorphic representations} of $GL_n(\aA_\qQ)$. To be absolutely precise in defining automorphic representations, we need to be much more careful here, but what we described is a nice first approximation.\\
+
+Then the Langlands correspondence asserts that to each $n$-dimensional representation of the absolute Galois group one associates an automorphic representation. Well, it wouldn't be so interesting if all we have is a set theoretic bijection: cardinality argument would give it away even if the correspondence would be highly non-canonical. Indeed, the correspondence asserts much more: it predicts that the data of Frobenius eigenvalues in the Galois side correspond to the one of Hecke eigenvalues in the automorphic side.\\
+
+We need to explain what we mean by them. Recall the Frobenius automorphism for each prime $p$: each is a generator of the Galois group $\mr{Gal}(\fF_q/ \fF_p )$ for any finite extension $\fF_q$ of $\fF_p$. Given a finite-dimensional complex representation $V$ of the absolute Galois group $G_\qQ$, one can lift the Frobenius automorphism as a conjugacy class of $\mr{Gal}(\overline{\qQ}/\qQ)$ for almost all primes through the diagram \[
+\xymatrix{
+\mr{Gal}(\overline{\qQ_p}/  \qQ_p) \ar[d] \ar@{^(->}[r] & \mr{Gal}(\overline{\qQ}/\qQ) \\
+\mr{Gal}(\overline{\fF_p} /  \fF_p)
+}
+\] for a fixed embedding $\iota \colon \overline{\qQ}\hookrightarrow \overline{\qQ_p}$ over $\qQ \hookrightarrow \qQ_p$. The eigenvalues of such elements, which is well-defined for a conjugacy class, are called the Frobenius eigenvalues.\\
+
+Hecke eigenvalues are harder to define, but basically they are eigenvalues with respect to certain integral operator acting on automorphic representations. These are also defined for all but finitely many primes.\\
+
+Now the claim is that for any such Galois representation $\sigma$, there exists an automorphic representation $\pi_\sigma$ such that its Hecke eigenvalues are exactly the Frobenius eigenvalues of $\sigma$ for those almost all prime numbers.\\
+
+This should be very surprising. First of all, many questions in number theory can be reformulated in terms of a Galois group and its representations. On the other hand, once we know the correspondence, automorphic representations are much more concrete, being of analytic nature. One can hope to read off some of nontrivial number theoretic data out of those analytic objects, using this correspondence.\\
+
+For those who know some mathematical physics, it is just like mirror symmetry where one can read off the number of rational curves on a quintic threefold using some Hodge-theoretic data, for instance. Actually, if you want, this is more than just an analogy: through geometric Langlands and its physical interpretation as pioneered by Kapustin-Witten, one might say that the automorphic side is A-model and the Galois side is B-model in the sense of mirror symmetry!
+
+\section{Diophantine Equations}
+
+We would like to be a bit more concrete. In practice, Galois representations arise in a very natural way from an arithmetic question. Suppose one is interested in counting the number of solutions to an integral equation, or the number of points of an algebraic variety $X$ over $\zZ$. Or, one could ask existence of a solution at all, just like Fermat's last theorem. This is extremely hard question: there is a precise sense that there is nothing harder than this sort of problem in mathematics!
+
+\begin{rem*}[Undecidability in number theory]
+A mindblowing theorem of Yuri Matiyasevich, based on the works of Julia Robinson, Martin Davis, and Hilary Putnam, says that most of mathematical problems can be encoded in a Diophantine equation. For example, there is a polynomial $f \in \zZ[x_1,\cdots,x_n]$ such that Riemann hypothesis is true if and only if $f(x_1,\cdots,x_n)=0$ has no integral solution. Similarly for Goldbach conjecture or the Poincar\'e conjecture.
+\end{rem*}
+
+A much more tractable problem is to solve the equation modulo $p$, because then we can try to count them all. In terms of algebraic geometry, we should think of its reduction $X$ defined over $k=\fF_p$. For a later use, we introduce $X_{\overline{k}} = \mr{Spec}(\overline{k}) \times_{\mr{Spec}(k) } X $ so that we can write the desired solution set as $X_{\overline{k}}(\fF_p)$. Having $X_{\overline{k}}$, we might also consider $X_{\overline{k}}(\fF_{p^r})$ in the same way for each $r \geq 1$ as further information. It is a well-known, but mysterious, fact in mathematics that if one wants to understand a sequence of numbers better, then one should introduce its generating series. In our case, the relevant generating series is called the \textit{local zeta function of $X$ at $p$}, defined by \[\zeta_p(X,T) = \mr{exp}\left( \displaystyle\sum_{r \geq 1} |X_{\overline{k}}(\fF_{p^r})| \frac{T^r}{r} \right) \in \qQ[\![T]\!]. \]
+
+\begin{rem*}[Relation with Riemann zeta function]
+We use this particular form of zeta function, because if $X$ were a single point over $\fF_p$, then we would obtain the Euler factor $\frac{1}{1- p^{-s}}$ after setting $T=p^{-s}$. If we started with $X= \mr{Spec}(\zZ)$, then the product of the finite local factors gives the Riemann zeta function back.
+\end{rem*}
+
+It was the deep insight of Grothendieck, following Weil's conjectures, that such information can be encoded in terms of cohomology theory, called the \'etale cohomology theory. One should not be afraid of \'etale cohomology, because for a variety which can also be defined over $\cC$, it is known to be isomorphic to singular cohomology of its complex points with $\fF_\ell$ (and hence $\zZ_\ell$ and $\qQ_\ell$) coefficients for prime $\ell$. On the other hand, the point is that even if $X$ is defined as a smooth projective variety over a finite field of characteristic $p$, one still has such a cohomology theory which admits a natural action of the Galois group, whose Frobenius eigenvalues encode the information for solutions modulo $p$ as we discuss now.\\
+
+Recall the usual Lefschetz fixed-point theorem: for a compact topological space $M$ and a continuous map $\phi \colon M\rightarrow M$, we know that if $L(\phi) = \displaystyle\sum_{i} (-1)^i \mr{tr}( \phi^* | H^i(M) ) \neq 0$, then $\phi$ has a fixed point.\\
+
+In algebraic geometry, one has the following analogue of the fixed-point theorem.
+
+\begin{theorem}[Grothendieck-Lefschetz fixed-point formula]
+For a smooth projective variety $X_{\overline{k}}$ of dimension $d$ and a morphism $ \phi \colon X_{\overline{k}} \rightarrow X_{\overline{k}}$, one has the identity \[
+\Gamma_\phi \cdot \Delta = \displaystyle\sum_{i = 0 }^{2d } (-1)^i \mr{tr }( \phi \mid H^i_{et}(X_{\overline{k}},\qQ_\ell) ),
+\]
+where $\Gamma_\phi$ is the graph of $\phi$, the subset $\Delta \subset X_{\overline{k}} \times X_{\overline{k}}$ stands for the diagonal, and $\Gamma_\phi \cdot \Delta$ is their intersection number, namely, the number of fixed points of $\phi$ with multiplicities counted. 
+\end{theorem}
+
+The whole point of the theorem was to apply it for the Frobenius automorphism.
+
+\begin{corollary}
+For a smooth projective variety $X_{\overline{k}}$ of dimension $d$, one has \[|X_{\overline{k}}(\fF_{p^r})| = \displaystyle\sum_{i = 0 }^{2d }  (-1)^i \mr{tr}(\mr{Frob}_p^r|H^i_{et}(X_{\overline{k} } , \qQ_\ell ) ),\] where $\mr{Frob}_p \in \mr{Gal}(\overline{\fF_p} / \fF_p )$ stands for the \textit{geometric Frobenius} defined by $x \mapsto x^{p^{-1}}$.
+\end{corollary}
+
+\begin{proof}
+It follows from the following observations:
+\begin{itemize}
+\item For $X_{\overline{k}} = \mr{Spec}(\overline{k}) \times_{\mr{Spec}(k)} X$, the set $X_{\overline{k}} (\fF_{p^r})$ is the fixed points of the \textit{relative Frobenius} action $\mr{Fr}_r = 1_{\mr{Spec}(\overline{k}) } \times \mr{Fr}_X $ with $\mr{Fr}_X \colon \cO_X \rightarrow \cO_X$ given by $f \mapsto f^p$.
+\item The \textit{arithmetic Frobenius} $\mr{Fr}_a = \mr{Fr}_{\mr{Spec}(\overline{k}) } \times 1_X$ is defined with $\mr{Fr}_{\mr{Spec}(\overline{k}) }$ acting as $x \mapsto x^p$.
+\item $\mr{Fr}_{X_{\overline{k}}}= \mr{Fr}_r \circ \mr{Fr}_a = \mr{Fr}_a \circ \mr{Fr}_r$ is the identity map as a topological space. In particular, it acts trivially on \'etale cohomology of $X_{\overline{k}}$.
+\end{itemize}
+\end{proof}
+
+Together with the identity in linear algebra \[-\log(\det(1 - \phi T | V ) ) = \displaystyle\sum_{r \geq 1} \mr{tr} ( \phi^r \mid V ) \frac{T^r}{r},\]
+one can obtain a series of equalities:
+\begin{eqnarray*}
+\zeta_p(X,T)  &=& \mr{exp}\left( \displaystyle\sum_{r \geq 1} |X_{\overline{k}}(\fF_{p^r})| \frac{T^r}{r} \right)\\
+ &=& \mr{exp}\left(\displaystyle\sum_{r \geq 1} \displaystyle\sum_{i = 0 }^{2d }  (-1)^i \mr{tr}(\mr{Frob}_p^r|H^i_{et}(X_{\overline{k} } , \qQ_\ell )  \frac{T^r}{r}  \right)\\
+ &=& \mr{exp}\left(\displaystyle\sum_{i = 0 }^{2d }  (-1)^{i-1} \log (\det ( 1- \mr{Frob}_p \cdot T |H^i_{et}(X_{\overline{k} } , \qQ_\ell )  ) )  \right)\\
+ &=& \displaystyle\prod_{i=0}^{2d } \mr{det}(1-\mr{Frob}_p \cdot T| H^i_{et}(X_{\overline{k} } , \qQ_\ell ) )^{(-1)^{i-1} }.
+\end{eqnarray*}
+
+If we set $P_i(T)= \mr{det}(1-\mr{Frob}_p \cdot T| H^i_{et}(X_{\overline{k} } , \qQ_\ell ) )$, then we proved that $\zeta_p(X,T)$ is of the form \[\zeta_p(X,T) = \dfrac{ P_1(T)\cdots P_{2d-1}(T) }{P_0(T)\cdots P_{2d}(T) },
+\]
+where $P_i(T)$ is an integral polynomial of degree $h^i_{et}(X_{\overline{k} } , \qQ_\ell )$ or $h^i_B(X(\cC), \qQ_\ell )$. The expected form of Poincar\'e duality, which is known to hold, would give a functional equation of the local zeta function. Moreover, if we write the eigenvalues of $\mr{Frob}_p$ on $H^i$ as $\alpha_{ij}$, Deligne's celebrated theorem says $|\iota(\alpha_{ij})| = p^{\frac{i}{2}}$ for any embedding $\iota \colon \overline{\zZ} \hookrightarrow \cC$.\\
+
+Now the next claim is that if $\zeta_{p}(X,T) = \dfrac{(1-\beta_1 T) \cdots (1-\beta_lT) }{(1-\alpha_1T) \cdots (1- \alpha_k T ) }$, then $|X_{\overline{k}}(\fF_{p^r})|= \displaystyle\sum_{i=1}^k \alpha_i^r - \displaystyle\sum_{j=1}^l \beta_j^r$. This essentially follows from the identity $\exp\left(\displaystyle\sum_{r=1}^\infty \frac{T^r}{r} \right) = \dfrac{1}{1-T}$ which one can easily check using logarithmic differentiation. In sum, the information of Frobenius eigenvalues, as in Deligne's theorem, determines the original question of counting the number of points modulo $p$ and more.\\
+
+
+Let us be even more concrete by considering an elliptic curve $E \subset \P^2$ defined over $\qQ$. Then the first \'etale cohomology $H^1_{et}(E, \qQ_\ell )$ is a 2-dimensional $\qQ_\ell$-vector space with an action of $\mr{Gal}(\overline{\qQ} / \qQ )$. In other words, we have a 2-dimensional $\ell$-adic representation $\sigma_{E,\ell} \colon \mr{Gal}(\overline{\qQ}/\qQ) \rightarrow GL_2(\qQ_\ell)$ for every prime $\ell$. Note that we fixed a harmless (for our purpose) identification $\overline{\qQ_\ell} \cong \cC$ here in applying the previous discussion.\\
+
+It is well-known that the elliptic curve $E$ defined over $\qQ$ can be extended to the elliptic curve $E_N$ over $\mr{Spec}(\zZ[\frac{1}{N} ])$ for some integer $N$. This amounts to saying that there exists a homogeneous equation defining $E$ with coefficients in $\zZ[\frac{1}{N}]$ such that for any prime $p \nmid N$, the reduction of $E_N$ modulo $p$ is an elliptic curve defined over $\fF_p$.\\
+
+It turns out that for $p\neq \ell$, except for a finite number of primes with $p \mid N$, the conjugacy class of $\sigma_{E,\ell}(\mr{Frob}_p)$ in $GL_2(\qQ_\ell)$ is well-defined. Then we know $\zeta_p(E,T ) = \dfrac{(1-\alpha T) (1-\beta T) }{(1-T) (1-pT) } $ for the Frobenius eigenvalues $\alpha,\beta \in \overline{\zZ}$ of $\mr{Frob}_p$ on $H^1_{et}(E,\qQ_\ell )$, which in particular gives $|E(\fF_{p^r}) | = 1 +p^r - \alpha^p - \beta^p$. Here $1-T$ comes from having the trivial representation $H^0(E,\qQ_\ell)=\qQ_\ell$ and $1-pT$ from its Tate twist $H^2(E,\qQ_\ell)= \qQ_\ell(-1)$. Moreover, since the isomorphism $\wedge^2 H^1(E,\qQ_\ell)\cong H^2(E,\qQ_\ell)$ from the cup product is supposed to respect the Galois action, we should have $\alpha \beta = p$ as well.\\
+
+Since the Frobenius element is well-defined only up to conjugation as an element of $\mr{Gal}(\overline{\qQ}/\qQ )$, we take the trace of $\mr{Frob}_p$ to obtain $a_p = p+1 - | E(\fF_p) |$, which is the only nontrivial information for a given elliptic curve in terms of Galois theory. Note that it is an integer independent of the prime $\ell$.

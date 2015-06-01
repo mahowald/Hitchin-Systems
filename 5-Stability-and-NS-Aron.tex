@@ -1,2 +1,262 @@
+%!TEX root = HitchinSystems.tex
+\newcommand{\sA}{\mathcal{A}}
+\newcommand{\sB}{\mathcal{B}}
+\newcommand{\sE}{\mathcal{E}}
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sG}{\mathcal{G}}
+\newcommand{\sL}{\mathcal{L}}
+\newcommand{\sO}{\mathcal{O}}
+\newcommand{\sP}{\mathcal{P}}
+
+\newcommand{\bZ}{\mathbb{Z}}
+\newtheorem{lem}{Lemma}
 
 \chapter{Stability and the Narasimhan-Seshadri Theorem}
+
+In this chapter we will give an idea of how the classical theorem of
+Narasimhan-Seshadri is proved. We follow mainly \cite{NS}. It states
+the following:
+\begin{thm}
+Let $X$ be a compact Riemann surface, of genus $\geq 2$ then the
+isomorphism classes\footnote{This means: representations are considered up to
+  conjugation, algebraic vector bundles up to isomorphism of vector
+  bundles and connections up to gauge fixing the imposed equation.} of
+the following three sets are in bijection:
+\begin{enumerate}[(i)]
+\item $n$-dimensional irreducible unitary representations of
+  $\pi_1(X)$;
+\item stable rank $n$, degree $0$, algebraic vector bundles over $X$;
+\item indecomposable rank $n$ holomorphic vector bundles with an
+  unitary connection $A$, s.t. $F_A=0$\footnote{Here we denote by
+    $F_A$ the curvature of the connection $A$.}.
+\end{enumerate}
+\end{thm}
+
+\begin{rem*}
+Actually Narasimhan-Seshadri result is more general. They consider a cover $p: Y
+\rightarrow X$ ramified of degree $d \in [-n+1,0]$ at a single point $x_0 \in
+X$, s.t. $Y/H \simeq X$ and $Y$ is simply connected. One modifies the
+above classes as follows:
+\begin{enumerate}[(i)']
+\item homomorphisms $\rho: H \rightarrow U(n)$ of type $\xi_{-d}$,
+  i.e. $\left.\rho\right|_{\mbox{Stab}_{x_0}}=\zeta_{-d}$\footnote{The
+  stabilizer of any pre-image of $x_0$, which is cyclic of order $n$,
+  acts by multiplication by a root of unity.};
+\item stable rank $n$, degree $d$, algebraic vector bundles over $X$;
+\item indecomposable rank $n$ holomorphic vector bundles over $X$, with an
+  unitary connection $A$, s.t. $F_A=-2\pi i\frac{d}{n}$.
+\end{enumerate}
+\end{rem*}
+
+\begin{rem*}
+Stricly speaking Narasimhan-Seshadri theorem is only the equivalence
+between (i)' and (ii)' above. A newer proof by Donaldson
+\cite{D} stablishes the relation between (ii)' and
+(iii)'\footnote{The relation between (iii)' and (i)' is an easy case
+  of Riemann-Hilbert correspondence. For the degree $0$ case this can
+  be seem directly.}. More importantly, their proof proceeds by
+induction on the rank and they stablish the following result as well,
+which is essential to make the inductive step work. Let $T$ be an
+algebraic variety and $\left\{ E_t\right\}_{T}$ be a flat family of
+algebraic vector bundles over $X$. Then $T_s \subset T$, the set of
+points $t$, s.t. $E_t$ is stable, is Zariski open. Similarly for
+semistable.
+\end{rem*} 
+
+\begin{rem*}
+The relevance of this result to this class is that Hitchin proves a
+more general result \cite[Proposition 3.4]{H1} by yet a different
+method. Taking $\Phi=0$ recovers the case $n=2$ above. He remarks in
+the introduction that one should be able to obtain the result for
+arbitrary $n$, by considering $GL_n$. (I don't know of a reference for
+this.)
+\end{rem*}
+
+From now one we will always be working in the algebraic category, that
+is by vector bundle we will mean an algebraic vector bundle, and
+families are algebraic families and so forth. We will also restrict to
+the simpler form we first stated and give the elements of the proof for
+it, the more general case is not much harder.
+
+\section{Weil's theorem}
+
+Firstly, we need to say a little bit about how to construct a vector
+bundle from a representation of $\pi_1(X)$, and which ones come from
+these. This is essentially the following result of Weil.
+
+\begin{prop} 
+An indecomposable vector $E$ over $X$ comes from a representation of
+$\pi_1(X)$ if and only if $c_1(E)=0$.
+\end{prop}
+
+\begin{proof}
+One direction is a construction. Let $p: Y \rightarrow X$ be a simply connected covering
+of $X$, and $\rho: \pi_1(X) \rightarrow GL(V)$ a representation, then define 
+\[\Phi(\rho) \equiv p_{*}\left(Y\times_{\pi_1(X)}V\right)^{\pi_1(X)},\]
+where we confund $Y\times_{\pi_1(X)}V$ the associated vector bundle over $Y$
+with the corresponding locally constant sheaf\footnote{The superscript $\pi_1(X)$
+means we consider the invariant part with respect to the $\pi_1(X)$ action by
+pullback.}. If $\dim(V) = n$ then $\Phi(\rho)$ is locally constant of
+rank $n$.
+
+For the converse, suppose $E$ is an indecomposable vector bundle
+over $X$. Let $P$ denote the associated principal $GL_n$-bundle, then
+one has the following exact sequence:
+\[0 \rightarrow \mbox{ad}(P) \rightarrow TP^{GL_n} \rightarrow TX \rightarrow 0,\]
+whose splitting is the data of an algebraic connection on $P$\footnote{The
+middle term is the invariant vectors of $TP$ with respect to the
+action of $GL_n$ induced from the $GL_n$-bundle structure, and
+$\mbox{ad}(P)$ is the associated vector bundle to $P$ obtained by
+taking the adjoint representation of $GL_n$ on its Lie algebra.}. There
+exists an element $\mbox{at}(P) \in H^1(X,\mbox{Hom}(TX,\mbox{ad}(P)))$ which
+measues when $P$ has a connection\footnote{This is the so-called
+  Atiyah class of a principal $G$-bundle and the preceeding exact
+  sequence defines the Atiyah (Lie) algebroid.}.
+Then one has the following non-trivial fact \cite[Section 5]{A}:
+\begin{lem}
+If $E$ is indecomposable then $\mbox{at}(E) = c_1(E)$.
+\end{lem}
+So by assumption our $E$ admits an algebraic connection
+$\nabla: E \rightarrow E\otimes\Omega^1_X$. Moreover since $X$ has complex
+dimension 1, $\nabla$ is integrable. So $\ker \nabla$ is a locally
+constant sheaf of vector spaces over $X$, i.e. a representation of
+$\pi_1(X)$.
+\end{proof}
+
+A not so hard fact to check is that $\Phi$ is actually a
+functor\footnote{From the category of finite dimensional
+  representations of $\pi_1(X)$ to that of vector bundles over $X$.}, that is
+\[\Phi\left(\rho,\rho'\right) = \mathcal{H}\mbox{om}_X(\Phi(\rho),\Phi(\rho')).\]
+
+The important result now is:
+\begin{lem} 
+When restricted to unitary representations $\Phi$ is fully faithful,
+i.e.
+\[\mbox{Hom}(\rho,\rho') \simeq \mathcal{H}\mbox{om}_X(\Phi(\rho),\Phi(\rho')).\]
+\end{lem}
+
+\begin{proof}
+Since the category of finite dimensional representations is
+semisimple, it is enough to consider irreducible objects, so one can
+suppose $(\rho,V)$ is trivial, then the statement becomes.
+\[V'^{\pi_1(X)} \simeq H^0(\pi_1(X),V') \simeq
+H^0(X,\Phi(V')),\]
+for any unitary finite dimensional represetation $V'$.
+Given $v \in V'^{\pi_1(X)}$ one has a section $s(y) = (y,v)$ of
+$Y\times_HV$, which is $\pi_1(X)$-equivariant so it gives a section of
+$\Phi(\rho')$. This clearly is zero only if $v$ is zero so that is
+injective. 
+Now for the surjectivity suppose one has a section $f \in
+H^0(X,\Phi(\rho'))$, this is a function $\tilde{f}: Y \rightarrow V$, s.t.
+\[\tilde{f}\circ h = \rho'(h) \tilde{f}.\]
+Since $V$ is unitary, let $||\tilde{f}||^2 =
+\left<\tilde{f},\tilde{f}\right>_{V}$. By definition
+$||\tilde{f}||^2:Y \rightarrow \mathbb{C}$, with $||\tilde{f}||^2\circ h =
+||\tilde{f}||^2$, so one gets a globally defined function on
+$X$. Since $X$ is projective this function is constant. Now
+$||\tilde{f}||^2$ constant implies that $\tilde{f}$ is also constant,
+so $\rho'$ acts trivially, or $\tilde{f}$ factor through
+$V'^{\pi_1(X)} \rightarrow V$.
+\end{proof}
+
+\section{Proof of main theorem}
+
+As we mentioned before the proof proceeds by induction on two assetion
+let's recall them for convinience.
+
+\begin{thm}
+Let $X$ be a compact Riemann surface of genus $\geq 2$.
+\begin{enumerate}[(i)]
+\item A rank $n$ vector bundle $E$ over $X$ of degree 0 is stable if and only if it
+is given by $\Phi(\rho)$ for some homomorphism $\rho: \pi_1(X) \rightarrow
+U(n)$, i.e. an unitary representation of $\pi_1(X)$.
+\item For any family $T$ of vector bundles over $X$, the subset $T_s
+  \subset T$ (resp. $T_{ss}$) of points whose fiber is a stable
+  (resp. semistable) vector bundle is Zariski open.
+\end{enumerate}
+\end{thm}
+
+We will essentially just prove (i). To prove (ii) one needs to
+consider specific models for the moduli spaces considered above and
+analise what the stability (or semistability) condition is inside
+them. This is standard depending on how one construct these moduli
+spaces.
+
+\begin{proof}
+\textit{Step 1 (line bundles):} The statement (ii) is trivial as stability is a
+vacuuos condition for line bundles.
+For (i) one recalls another definition of $c_1$ for line
+bundles. Consider the exponential exact sequence\footnote{Strictly
+  speaking, we use GAGA to be able to talk about the exponential map.}
+of sheaves
+\[0 \rightarrow \underline{\bZ} \rightarrow \sO_X \rightarrow \sO^{\times}_X 
+\rightarrow 0.\]
+Then one has a long exact sequence in cohomology
+\[\cdots \rightarrow H^1(X;\bZ) \rightarrow H^1(X,\sO_X) \rightarrow H^1(X,\sO^{\times}_X)
+\overset{c_1}{\rightarrow} H^2(X;\bZ) \rightarrow \cdots.\]
+This gives that $c^{-1}_1(0) \simeq H^1(X;U(1)) \simeq
+\mbox{Hom}(H_1(X;\bZ),U(1)) \simeq \mbox{Hom}(\pi_1(X),U(1))$\footnote{Here
+  $H^k(X;-)$ denotes singular cohomology and $H^k(X,-)$ denotes
+  coherent cohomology.}.
+
+\textit{Step 2 (irreducible unitary representations exist):} Since
+$\pi_1(X)$ could have only trivial unitary representations one needs some
+calculation to show that the space of such is non-empty. For example
+for $g=2$ (genus of X), one has generators $A_1,A_2,B_1,B_2$ for
+$\pi_1(X)$ and one can take $B_1 =
+\mbox{diag}(\xi_N,\xi^2_N,\ldots,\xi^N_N)$, where $\xi_N$ is the $N$th
+root of unity, $A_2$ the matrix with $1$'s only in the diagonal above
+the main diagonal, and $A_1=B^{-1}_1$ and $B_2 = A^{-1}_2$. A similar
+construction works for $g > 2$ as well.
+
+\textit{Step 3 (characterize the image of unitary and irreducible unitary
+representations):} Let $\rho$ be an unitary representation, then
+$\Phi(\rho)$ is semistable. Indeed, suppose there is $F \subset
+\Phi(\rho)$, s.t. $\deg(F) \geq 0$, we will prove that $\deg(F) =
+0$. By contradiction, let $\deg(F) > 0$, by taking the exterior power
+$\Lambda^{\mbox{rk}(F)}F \subset \Lambda^{\mbox{rk(F)}}\Phi(\rho)
+\equiv \Phi(\rho')$ one can suppose that $F$ has rank 1. Now let
+$\rho' = \oplus \sigma_i$ with $\sigma_i$ irreducible, we have
+projections:
+\[p_i: \Phi(\rho') \rightarrow \Phi(\sigma_i).\]
+By tensoring with degree $0$ line bundle $\sL$ one can suppose $F =
+\sO_X(dx_0)$ for some $x_o \in X$ and $d>0$, notice that for the
+representation $\rho'$ this just means tensoring with a character
+$\xi_{\sL}$. Now if $\sigma_0$ is the trivial representation than
+$\left.p_0\right|_F$ is zero, because $\mbox{deg}(\Phi(\sigma_0))$ and a
+non-zero map between line bundles can not decrease the
+degree\footnote{One sees this easily by taking the definition of
+  degree as the number of zeros minus the number of poles of a rational section.}. Now
+$H^0(X,F)\neq 0$, because $F=\sO_X(dx_0)$, however
+$H^0(X,\Phi(\sigma_i)) = 0$ for any non-trivial irreducible
+$\sigma_i$, by $H^0(X,\Phi(\sigma_i)) \simeq \sigma^{\pi_1(X)}_i = 0$
+since $\sigma_i$ is 1-dimensional. This gives a contradiction with
+non-zero $p_i$'s, since $F$ is a subbundle of $\Phi(\rho')$ it most be
+trivial, which is a contradiction with $\mbox{deg}(F)>0$.
+Notice that by using the induction hypothesis for smaller
+representations and the result just proved for the semistable one
+obtains that if $\rho$ is an irreducible unitary representation than
+$\Phi(\rho)$ is stable.
+
+\textit{Step 4 (the variety of representations):} One has a structure of
+algebraic variety on the space of representations of a fixed dimension of
+$\pi_1(X)$. Indeed these are given by a collection of matrices, $2g$ of
+them, satisfying one algebraic equation. Now this gives an algebraic
+space parametrizing vector bundles over $X$ obtained applying the
+functor $\Phi$. Moreover, one can put also an algebraic structure on
+the space of rank $n$ degree $d$ vector bundles over $X$. The set of indecomposable vector bundles inside these
+forms an irreducible variety \footnote{Both of these statements follow
+  form the representability of the Quot scheme, though \cite{NS} gives
+  a more direct argument.}. By Weil's theorem this is equivalent to
+the subvariety $S$ of $n$-dimensional representation whose associated
+vector bundle is stable.
+
+\textit{Step 5 (surjectivity):} Let $S$ be the subset of $n$-dimensional
+representations such that $\Phi(S)$ is stable. Then $S$ is a Zariski
+open set (assuming (ii)) of an irreducible variety (Step 4), hence
+connected. Now let $U_0 = U\cap S$ where $U$ is the set of unitary
+representations, and $U_0$ is the set of irreducible and unitary
+representations (Step 3). So $U_0$ is open and closed inside of $S$,
+which is connected, since $U_0$ is not empty (Step 2) $U_0=S$. This
+finishes the proof.
+\end{proof}

@@ -41,7 +41,9 @@ correspondence, in which one assigns to a flat connection the monodromy data aro
 \section{Local Case}
 
 Consider that a holomorphic vector bundle has a local trivialization by a holomorphic frame,
-with respect to which the Higgs field looks like 
+so in the local setting we can assume $E = D\times \mathbb C^n,$ where either
+$D$ is a disk $D = \{|z|<r\}\subset \mathbb C$ or $D = \mathbb C.$  In this frame, the
+Higgs field looks like 
 
 \section{Teichm\"uller theory}
 
@@ -53,7 +55,46 @@ it cotangent bundle $T^*C$ has a tautological holomorphic one-form $\theta$ and
 holomorphic symplectic structure $\Omega = d\theta$.  
 Treating $C$ as a real manifold, $T^*C$ has a canonical symplectic form $Re(\Omega)$
 for which the spectral curve is Lagrangian, and we would like to consider it as an
-object of the Fukaya category of $T^*C.$
+object of the Fukaya category of $T^*C.$  In fact if we can equip $T^*C$ with a K\"ahler
+form $\omega$ (this is not always possible, but is if $C = \mathbb C$) so that $T^*C$
+is hyper-K\"ahler, then the spectral curve is special Lagrangian for the Calabi-Yau
+form $\omega + i Im(\Omega),$ as $Im(\Omega)=0.$
+To treat the spectral curve as an object in the Fukaya category of $T^*C$,
+we equip it with a brane
+structure and a flat vector bundle (local system).  It is often fruitful to consider
+the case where the vector bundle is rank-one (so a $U(1)$ local system).
+
+Algebraically, we can consider the family of spectral curves together with their
+Jacobians.  This forms what is sometimes called the ``Beauville integrable system,"
+in the sense that the Jacobians are tori fibered over a base.  Since these
+spectral curves have an interpretation as special Lagrangians, we know that the
+dimension of the space of their deformations is the first betti number --- same as the
+dimension of the space of the fibers.
+
+Let $L$ be the spectral curve and $\cL$ a local system on $L$, so
+that $(L,\cL)$ is an object in the Fukaya category of $T^*C.$
+(This involves a discrete choice of brane structure, which we ignore for present purposes.)
+We consider the space $\cM(L,\cL)$ of (inequivalent) branes deformation equivalent to $(L,\cL)$.
+The space $\cM(L,\cL)$
+fibers over the space of Lagrangians deformation equivalent to $L$
+modulo Hamiltonian deformations by the map which forgets the local system (and the brane
+structure).  The tangent to this space at $L$ is closed modulo
+exact one-forms, i.e. $H_{dR}^1(L).$
+The fiber of the forgetful map is the space of $U(1)$ local systems on $L$, and the
+tangent space to this space is $H^1(L,i\bR)$.
+In fact, since nearby Lagrangians are all diffeomorphic, the fibration $\cM(L,\cL)$ has
+a canonical horizontal distribution defined by ``keeping the local system constant,'' and
+therefore the tangent space to $\cM(L,\cL)$ splits as a direct sum
+$H^1(L,\bR)\oplus iH^1(L,\bR).$
+In fact, we get more:  a local trivialization of $\cM(L,\cL)$ as a torus bundle.
+This decomposition also suggests that we can ``absorb'' the geometric deformations
+$H^1(L,\bR)$ by incorporating nonunitary line bundles.  If that were the case, then
+a Lagrangian $L$ would generate a chart for $\cM(L,\cL)$ given by rank-one \emph{nonunitary}
+local systems, a space we can identify with $(\bC^*)^{b_1(L)}.$  This will
+turn out to be a symplectic
+view of a cluster chart.
+
+
 
 
 
